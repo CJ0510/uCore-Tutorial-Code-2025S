@@ -18,6 +18,7 @@ void trap_init(void)
 //
 void usertrap(struct trapframe *trapframe)
 {
+	printf("usertrap: a0 = %p\n", trapframe->a0);
 	printf("usertrap: epc = %p, sp = %p, kernel_sp = %p\n", trapframe->epc,
 	       trapframe->sp, trapframe->kernel_sp);
 	printf("cause = %d\n", r_scause());
