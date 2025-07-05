@@ -18,6 +18,9 @@ void trap_init(void)
 //
 void usertrap(struct trapframe *trapframe)
 {
+	printf("usertrap: epc = %p, sp = %p, kernel_sp = %p\n", trapframe->epc,
+	       trapframe->sp, trapframe->kernel_sp);
+	printf("cause = %d\n", r_scause());
 	if ((r_sstatus() & SSTATUS_SPP) != 0)
 		panic("usertrap: not from user mode");
 
@@ -62,6 +65,7 @@ void usertrapret(struct trapframe *trapframe, uint64 kstack)
 	trapframe->kernel_sp = kstack + PGSIZE; // process's kernel stack
 	trapframe->kernel_trap = (uint64)usertrap;
 	trapframe->kernel_hartid = r_tp(); // hartid for cpuid()
+
 
 	w_sepc(trapframe->epc);
 	// set up the registers that trampoline.S's sret will use

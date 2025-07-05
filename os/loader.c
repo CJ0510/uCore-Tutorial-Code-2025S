@@ -14,6 +14,7 @@ void loader_init()
 	app_info_ptr = (uint64 *)_app_num;
 	app_cur = -1;
 	app_num = *app_info_ptr;
+	printf("load init\n");
 }
 
 __attribute__((aligned(4096))) char user_stack[USER_STACK_SIZE];
@@ -35,7 +36,6 @@ int run_next_app()
 	if (app_cur >= app_num) {
 		return -1;
 	}
-	infof("load and run app %d", app_cur);
 	uint64 length = load_app(app_info_ptr);
 	debugf("bin range = [%p, %p)", *app_info_ptr, *app_info_ptr + length);
 	memset(trapframe, 0, 4096);

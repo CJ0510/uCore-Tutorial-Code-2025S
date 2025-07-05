@@ -1,0 +1,1409 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+.DEFAULT_GOAL	user/Makefile	/^.DEFAULT_GOAL := target$/;"	m
+ALIGN	user/lib/string.c	5;"	d	file:
+ARCH	user/Makefile	/^ARCH ?= riscv64$/;"	m
+AS	Makefile	/^AS = $(TOOLPREFIX)gcc$/;"	m
+AS_OBJS	Makefile	/^AS_OBJS = $(addprefix $(BUILDDIR)\/, $(addsuffix .o, $(basename $(AS_SRCS))))$/;"	m
+AS_SRCS	Makefile	/^AS_SRCS = $(wildcard $K\/*.S)$/;"	m
+AT_FDCWD	user/include/stddef.h	61;"	d
+BASE	Makefile	/^BASE ?= 0$/;"	m
+BASE	user/Makefile	/^BASE ?= 0$/;"	m
+BASE_ADDRESS	os/loader.h	11;"	d
+BLUE	os/log.h	/^	BLUE = 34,$/;"	e	enum:LOG_COLOR
+BOARD	Makefile	/^BOARD		?= qemu$/;"	m
+BOOTLOADER	Makefile	/^BOOTLOADER	:= .\/bootloader\/rustsbi-qemu.bin$/;"	m
+BS	user/src/usershell.c	/^const unsigned char BS = 0x08;$/;"	v
+BUILDDIR	Makefile	/^BUILDDIR = build$/;"	m
+Breakpoint	os/trap.h	/^	Breakpoint = 3,$/;"	e	enum:Exception
+CC	Makefile	/^CC = $(TOOLPREFIX)gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb$/;"	m
+CH2_BASE_TESTS	user/Makefile	/^CH2_BASE_TESTS := ch2b_$/;"	m
+CH2_TESTS	user/Makefile	/^CH2_TESTS := $(CH2_BASE_TESTS)$/;"	m
+CH3_BASE_TESTS	user/Makefile	/^CH3_BASE_TESTS := ch3b_ $(CH2_BASE_TESTS)$/;"	m
+CH3_TESTS	user/Makefile	/^CH3_TESTS := $(CH3_BASE_TESTS) ch3_$/;"	m
+CH3_TESTS	user/Makefile	/^CH3_TESTS := $(CH3_BASE_TESTS)$/;"	m
+CH4_BASE_TESTS	user/Makefile	/^CH4_BASE_TESTS := $(CH2_BASE_TESTS) ch3b_yield # ch4b_$/;"	m
+CH4_TESTS	user/Makefile	/^CH4_TESTS := $(CH4_BASE_TESTS) ch4_ ch3b_sleep ch3_$/;"	m
+CH4_TESTS	user/Makefile	/^CH4_TESTS := $(CH4_BASE_TESTS)$/;"	m
+CH5_BASE_TESTS	user/Makefile	/^CH5_BASE_TESTS := ch5b_ $(CH3_BASE_TESTS) usershell$/;"	m
+CH5_SCHED_TEST	user/Makefile	/^CH5_SCHED_TEST := ch5t_$/;"	m
+CH5_TESTS_BASE	user/Makefile	/^CH5_TESTS_BASE := $(CH5_BASE_TESTS)$/;"	m
+CH5_TESTS_BASE	user/Makefile	/^CH5_TESTS_BASE := ch5b_ $(CH4_TESTS) ch5_ ch5t_ usershell $/;"	m
+CH6_BASE_TESTS	user/Makefile	/^CH6_BASE_TESTS := ch6b_ $(CH5_BASE_TESTS) $/;"	m
+CH6_TESTS	user/Makefile	/^CH6_TESTS := $(CH6_BASE_TESTS) ch6_ ch5_ ch4_$/;"	m
+CH6_TESTS	user/Makefile	/^CH6_TESTS := $(CH6_BASE_TESTS)$/;"	m
+CH7_BASE_TESTS	user/Makefile	/^CH7_BASE_TESTS := ch7b_ $(CH6_BASE_TESTS) $/;"	m
+CH7_TESTS	user/Makefile	/^CH7_TESTS := $(CH7_BASE_TESTS) ch7_$/;"	m
+CH7_TESTS	user/Makefile	/^CH7_TESTS := $(CH7_BASE_TESTS)$/;"	m
+CH8_BASE_TESTS	user/Makefile	/^CH8_BASE_TESTS := ch8b_ $(CH7_BASE_TESTS) $/;"	m
+CH8_TESTS	user/Makefile	/^CH8_TESTS := $(CH8_BASE_TESTS) ch8_$/;"	m
+CH8_TESTS	user/Makefile	/^CH8_TESTS := $(CH8_BASE_TESTS)$/;"	m
+CHAPTER	Makefile	/^CHAPTER ?= $(shell git rev-parse --abbrev-ref HEAD | grep -oP 'ch\\K[0-9]')$/;"	m
+CHAPTER	user/Makefile	/^CHAPTER ?= $/;"	m
+CHAR_MAX	user/include/stddef.h	24;"	d
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH2_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH3_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH4_BASE_TESTS) ch3b_sleep$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH4_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH5_SCHED_TEST)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH5_TESTS_BASE)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH6_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH7_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := $(CH8_TESTS)$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := __ch2_bad_$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := ch4_ ch4b_$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := ch5_ ch5b_ ch5t_$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := ch6_ ch6b_$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := ch7_ ch7b_$/;"	m
+CH_TESTS	user/Makefile	/^	CH_TESTS := ch8_$/;"	m
+CH_TESTS	user/Makefile	/^CH_TESTS :=  $/;"	m
+CONSOLE_H	os/console.h	2;"	d
+CONST_H	os/const.h	2;"	d
+CP	Makefile	/^CP = cp$/;"	m
+CP	user/Makefile	/^CP := cp$/;"	m
+CPU_FREQ	os/timer.h	8;"	d
+CR	user/src/usershell.c	/^const unsigned char CR = 0x0d;$/;"	v
+C_OBJS	Makefile	/^C_OBJS = $(addprefix $(BUILDDIR)\/, $(addsuffix .o, $(basename $(C_SRCS))))$/;"	m
+C_SRCS	Makefile	/^C_SRCS = $(wildcard $K\/*.c)$/;"	m
+DEFS_H	os/defs.h	2;"	d
+DIR	user/include/stddef.h	58;"	d
+DL	user/src/usershell.c	/^const unsigned char DL = 0x7f;$/;"	v
+EOF	user/include/stdio.h	25;"	d
+Exception	os/trap.h	/^enum Exception {$/;"	g
+FAILS	user/src/ch5_mergetest.c	/^const char *FAILS[] = {$/;"	v
+FAILS	user/src/ch6_usertest.c	/^const char *FAILS[] = {$/;"	v
+FILE	user/include/stddef.h	59;"	d
+GDB	Makefile	/^GDB = $(TOOLPREFIX)gdb$/;"	m
+GRAY	os/log.h	/^	GRAY = 90,$/;"	e	enum:LOG_COLOR
+GREEN	os/log.h	/^	GREEN = 32,$/;"	e	enum:LOG_COLOR
+HASZERO	user/lib/string.c	8;"	d	file:
+HEADER_DEP	Makefile	/^HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))$/;"	m
+HEIGHT	user/src/ch3b_yield0.c	/^const int HEIGHT = 5;$/;"	v
+HEIGHT	user/src/ch3b_yield1.c	/^const int HEIGHT = 5;$/;"	v
+HEIGHT	user/src/ch3b_yield2.c	/^const int HEIGHT = 5;$/;"	v
+HIGHS	user/lib/string.c	7;"	d	file:
+INTMAX_MAX	user/include/stddef.h	20;"	d
+INT_MAX	user/include/stddef.h	22;"	d
+IPC_64	user/lib/arch/riscv/syscall_arch.h	79;"	d
+IllegalInstruction	os/trap.h	/^	IllegalInstruction = 2,$/;"	e	enum:Exception
+InstructionAccessFault	os/trap.h	/^	InstructionAccessFault = 1,$/;"	e	enum:Exception
+InstructionMisaligned	os/trap.h	/^	InstructionMisaligned = 0,$/;"	e	enum:Exception
+InstructionPageFault	os/trap.h	/^	InstructionPageFault = 12,$/;"	e	enum:Exception
+Interrupt	os/trap.h	/^enum Interrupt {$/;"	g
+K	Makefile	/^K = os$/;"	m
+LD	Makefile	/^LD = $(TOOLPREFIX)ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = -z max-page-size=4096$/;"	m
+LF	user/src/usershell.c	/^const unsigned char LF = 0x0a;$/;"	v
+LOADER_H	os/loader.h	2;"	d
+LOG	Makefile	/^LOG ?= error$/;"	m
+LOG_COLOR	os/log.h	/^enum LOG_COLOR {$/;"	g
+LOG_H	os/log.h	2;"	d
+LONG_MAX	user/include/stddef.h	19;"	d
+LOOP	user/src/ch8b_threads.c	5;"	d	file:
+LOOP	user/src/ch8b_threads_arg.c	5;"	d	file:
+LoadAccessFault	os/trap.h	/^	LoadAccessFault = 5,$/;"	e	enum:Exception
+LoadMisaligned	os/trap.h	/^	LoadMisaligned = 4,$/;"	e	enum:Exception
+LoadPageFault	os/trap.h	/^	LoadPageFault = 13,$/;"	e	enum:Exception
+MAGIC	user/src/ch2b_exit.c	/^const int MAGIC = 1234;$/;"	v
+MAGIC	user/src/ch5b_exit.c	/^const int MAGIC = 0x1234;$/;"	v
+MAKE_SATP	os/riscv.h	171;"	d
+MAP_ANONYMOUS	user/include/stddef.h	85;"	d
+MAP_SHARED	user/include/stddef.h	86;"	d
+MAX	os/defs.h	16;"	d
+MAX	user/lib/stdio.c	7;"	d	file:
+MAXVA	os/riscv.h	317;"	d
+MAX_APP_SIZE	os/loader.h	12;"	d
+MAX_ARG_NUM	user/src/usershell.c	6;"	d	file:
+MAX_CHILD	user/src/ch5_spawn0.c	/^const int MAX_CHILD = 40;$/;"	v
+MAX_CHILD	user/src/ch5b_forktest1.c	/^const int MAX_CHILD = 40;$/;"	v
+MAX_STR_LEN	user/src/usershell.c	7;"	d	file:
+MAX_SYSCALL_NUM	user/include/stddef.h	63;"	d
+MAX_TIME	user/src/ch5t_stride0.c	/^const int MAX_TIME = 1000;$/;"	v
+MAX_TIME	user/src/ch5t_stride1.c	/^const int MAX_TIME = 1000;$/;"	v
+MAX_TIME	user/src/ch5t_stride2.c	/^const int MAX_TIME = 1000;$/;"	v
+MAX_TIME	user/src/ch5t_stride3.c	/^const int MAX_TIME = 1000;$/;"	v
+MAX_TIME	user/src/ch5t_stride4.c	/^const int MAX_TIME = 1000;$/;"	v
+MAX_TIME	user/src/ch5t_stride5.c	/^const int MAX_TIME = 1000;$/;"	v
+MIE_MEIE	os/riscv.h	92;"	d
+MIE_MSIE	os/riscv.h	94;"	d
+MIE_MTIE	os/riscv.h	93;"	d
+MIN	os/defs.h	15;"	d
+MIN	user/lib/stdio.c	8;"	d	file:
+MOD	user/src/ch2b_power.c	/^const int MOD = 10007;$/;"	v
+MODE	user/Makefile	/^MODE ?= release$/;"	m
+MSTATUS_MIE	os/riscv.h	20;"	d
+MSTATUS_MPP_M	os/riscv.h	17;"	d
+MSTATUS_MPP_MASK	os/riscv.h	16;"	d
+MSTATUS_MPP_S	os/riscv.h	18;"	d
+MSTATUS_MPP_U	os/riscv.h	19;"	d
+MachineEnvCall	os/trap.h	/^	MachineEnvCall = 11,$/;"	e	enum:Exception
+N	user/src/ch8b_mut_phi_din.c	5;"	d	file:
+NELEM	os/defs.h	14;"	d
+NPROC	os/proc.h	6;"	d
+NTHREAD	user/src/ch8b_threads.c	6;"	d	file:
+NTHREAD	user/src/ch8b_threads_arg.c	6;"	d	file:
+NULL	user/include/stddef.h	45;"	d
+NUM	user/src/ch5b_forktest2.c	/^const int NUM = 5;$/;"	v
+OBJCOPY	Makefile	/^OBJCOPY = $(TOOLPREFIX)objcopy$/;"	m
+OBJCOPY	user/Makefile	/^OBJCOPY := $(ARCH)-linux-musl-objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP = $(TOOLPREFIX)objdump$/;"	m
+OBJDUMP	user/Makefile	/^OBJDUMP := $(ARCH)-linux-musl-objdump$/;"	m
+OBJS	Makefile	/^OBJS = $(C_OBJS) $(AS_OBJS)$/;"	m
+ONES	user/lib/string.c	6;"	d	file:
+O_CREATE	user/include/fcntl.h	7;"	d
+O_CREATE	user/include/stddef.h	56;"	d
+O_RDONLY	user/include/fcntl.h	4;"	d
+O_RDONLY	user/include/stddef.h	53;"	d
+O_RDWR	user/include/fcntl.h	6;"	d
+O_RDWR	user/include/stddef.h	55;"	d
+O_TRUNC	user/include/fcntl.h	8;"	d
+O_WRONLY	user/include/fcntl.h	5;"	d
+O_WRONLY	user/include/stddef.h	54;"	d
+P	user/src/ch2b_power.c	/^const int P = 3;$/;"	v
+PA2PTE	os/riscv.h	302;"	d
+PAGE_SIZE	os/const.h	4;"	d
+PGROUNDDOWN	os/riscv.h	293;"	d
+PGROUNDUP	os/riscv.h	292;"	d
+PGSHIFT	os/riscv.h	290;"	d
+PGSIZE	os/riscv.h	289;"	d
+PRINTF_H	os/printf.h	2;"	d
+PROC_H	os/proc.h	2;"	d
+PROT_EXEC	user/include/stddef.h	82;"	d
+PROT_NONE	user/include/stddef.h	79;"	d
+PROT_READ	user/include/stddef.h	80;"	d
+PROT_WRITE	user/include/stddef.h	81;"	d
+PTE2PA	os/riscv.h	304;"	d
+PTE_FLAGS	os/riscv.h	306;"	d
+PTE_R	os/riscv.h	296;"	d
+PTE_U	os/riscv.h	299;"	d
+PTE_V	os/riscv.h	295;"	d
+PTE_W	os/riscv.h	297;"	d
+PTE_X	os/riscv.h	298;"	d
+PX	os/riscv.h	311;"	d
+PXMASK	os/riscv.h	309;"	d
+PXSHIFT	os/riscv.h	310;"	d
+PY	Makefile	/^PY = python3$/;"	m
+QEMU	Makefile	/^QEMU = qemu-system-riscv64$/;"	m
+QEMUGDB	Makefile	/^QEMUGDB = $(shell if $(QEMU) -help | grep -q '^-gdb'; \\$/;"	m
+QEMUOPTS	Makefile	/^QEMUOPTS = \\$/;"	m
+RED	os/log.h	/^	RED = 31,$/;"	e	enum:LOG_COLOR
+RES_TYPE	user/src/ch8_sem1_deadlock.c	12;"	d	file:
+RES_TYPE	user/src/ch8_sem2_deadlock.c	13;"	d	file:
+RISCV_H	os/riscv.h	2;"	d
+ROUND	user/src/ch8b_mut_phi_din.c	6;"	d	file:
+RUNNABLE	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+RUNNING	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+SATP_SV39	os/riscv.h	169;"	d
+SBI	Makefile	/^SBI			?= rustsbi$/;"	m
+SBI_CLEAR_IPI	os/sbi.c	/^const uint64 SBI_CLEAR_IPI = 3;$/;"	v
+SBI_CONSOLE_GETCHAR	os/sbi.c	/^const uint64 SBI_CONSOLE_GETCHAR = 2;$/;"	v
+SBI_CONSOLE_PUTCHAR	os/sbi.c	/^const uint64 SBI_CONSOLE_PUTCHAR = 1;$/;"	v
+SBI_H	os/sbi.h	2;"	d
+SBI_REMOTE_FENCE_I	os/sbi.c	/^const uint64 SBI_REMOTE_FENCE_I = 5;$/;"	v
+SBI_REMOTE_SFENCE_VMA	os/sbi.c	/^const uint64 SBI_REMOTE_SFENCE_VMA = 6;$/;"	v
+SBI_REMOTE_SFENCE_VMA_ASID	os/sbi.c	/^const uint64 SBI_REMOTE_SFENCE_VMA_ASID = 7;$/;"	v
+SBI_SEND_IPI	os/sbi.c	/^const uint64 SBI_SEND_IPI = 4;$/;"	v
+SBI_SET_TIMER	os/sbi.c	/^const uint64 SBI_SET_TIMER = 0;$/;"	v
+SBI_SHUTDOWN	os/sbi.c	/^const uint64 SBI_SHUTDOWN = 8;$/;"	v
+SIE_SEIE	os/riscv.h	76;"	d
+SIE_SSIE	os/riscv.h	78;"	d
+SIE_STIE	os/riscv.h	77;"	d
+SIZE	user/src/ch2b_power.c	/^const int SIZE = 10;$/;"	v
+SLEEPING	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+SLEEP_SCALE	user/src/ch8b_mut_phi_din.c	7;"	d	file:
+SS	user/lib/string.c	4;"	d	file:
+SSTATUS_SIE	os/riscv.h	47;"	d
+SSTATUS_SPIE	os/riscv.h	45;"	d
+SSTATUS_SPP	os/riscv.h	44;"	d
+SSTATUS_UIE	os/riscv.h	48;"	d
+SSTATUS_UPIE	os/riscv.h	46;"	d
+STDERR	os/const.h	/^	STDERR = 2,$/;"	e	enum:__anon1
+STDIN	os/const.h	/^	STDIN = 0,$/;"	e	enum:__anon1
+STDOUT	os/const.h	/^	STDOUT = 1,$/;"	e	enum:__anon1
+STEP	user/src/ch2b_power.c	/^const int STEP = 100000;$/;"	v
+STR	user/src/ch7b_pipetest.c	/^const char STR[] = "hello pipe!";$/;"	v
+STRINGIFY	user/include/stdlib.h	11;"	d
+STRING_H	os/string.h	2;"	d
+SYSCALL_EXIT	user/src/ch3_trace.c	7;"	d	file:
+SYSCALL_GETTIMEOFDAY	user/src/ch3_trace.c	9;"	d	file:
+SYSCALL_H	os/syscall.h	2;"	d
+SYSCALL_TRACE	user/src/ch3_trace.c	10;"	d	file:
+SYSCALL_WRITE	user/src/ch3_trace.c	6;"	d	file:
+SYSCALL_YIELD	user/src/ch3_trace.c	8;"	d	file:
+SYS_accept	os/syscall_ids.h	202;"	d
+SYS_accept	user/lib/syscall_ids.h	202;"	d
+SYS_accept4	os/syscall_ids.h	242;"	d
+SYS_accept4	user/lib/syscall_ids.h	242;"	d
+SYS_acct	os/syscall_ids.h	89;"	d
+SYS_acct	user/lib/syscall_ids.h	89;"	d
+SYS_add_key	os/syscall_ids.h	217;"	d
+SYS_add_key	user/lib/syscall_ids.h	217;"	d
+SYS_adjtimex	os/syscall_ids.h	171;"	d
+SYS_adjtimex	user/lib/syscall_ids.h	171;"	d
+SYS_arch_specific_syscall	os/syscall_ids.h	244;"	d
+SYS_arch_specific_syscall	user/lib/syscall_ids.h	244;"	d
+SYS_bind	os/syscall_ids.h	200;"	d
+SYS_bind	user/lib/syscall_ids.h	200;"	d
+SYS_bpf	os/syscall_ids.h	265;"	d
+SYS_bpf	user/lib/syscall_ids.h	265;"	d
+SYS_brk	os/syscall_ids.h	214;"	d
+SYS_capget	os/syscall_ids.h	90;"	d
+SYS_capget	user/lib/syscall_ids.h	90;"	d
+SYS_capset	os/syscall_ids.h	91;"	d
+SYS_capset	user/lib/syscall_ids.h	91;"	d
+SYS_chdir	os/syscall_ids.h	49;"	d
+SYS_chdir	user/lib/syscall_ids.h	49;"	d
+SYS_chroot	os/syscall_ids.h	51;"	d
+SYS_chroot	user/lib/syscall_ids.h	51;"	d
+SYS_clock_adjtime	os/syscall_ids.h	251;"	d
+SYS_clock_adjtime	user/lib/syscall_ids.h	251;"	d
+SYS_clock_getres	os/syscall_ids.h	114;"	d
+SYS_clock_getres	user/lib/syscall_ids.h	114;"	d
+SYS_clock_gettime	os/syscall_ids.h	113;"	d
+SYS_clock_gettime	user/lib/syscall_ids.h	113;"	d
+SYS_clock_nanosleep	os/syscall_ids.h	115;"	d
+SYS_clock_nanosleep	user/lib/syscall_ids.h	115;"	d
+SYS_clock_settime	os/syscall_ids.h	112;"	d
+SYS_clock_settime	user/lib/syscall_ids.h	112;"	d
+SYS_clone	os/syscall_ids.h	220;"	d
+SYS_clone	user/lib/syscall_ids.h	220;"	d
+SYS_clone3	os/syscall_ids.h	294;"	d
+SYS_close	os/syscall_ids.h	57;"	d
+SYS_close	user/lib/syscall_ids.h	57;"	d
+SYS_condvar_create	user/lib/syscall_ids.h	294;"	d
+SYS_condvar_signal	user/lib/syscall_ids.h	295;"	d
+SYS_condvar_wait	user/lib/syscall_ids.h	296;"	d
+SYS_connect	os/syscall_ids.h	203;"	d
+SYS_connect	user/lib/syscall_ids.h	203;"	d
+SYS_copy_file_range	os/syscall_ids.h	270;"	d
+SYS_copy_file_range	user/lib/syscall_ids.h	270;"	d
+SYS_delete_module	os/syscall_ids.h	106;"	d
+SYS_delete_module	user/lib/syscall_ids.h	106;"	d
+SYS_dup	os/syscall_ids.h	24;"	d
+SYS_dup	user/lib/syscall_ids.h	24;"	d
+SYS_dup3	os/syscall_ids.h	25;"	d
+SYS_dup3	user/lib/syscall_ids.h	25;"	d
+SYS_enable_deadlock_detect	user/lib/syscall_ids.h	292;"	d
+SYS_epoll_create1	os/syscall_ids.h	21;"	d
+SYS_epoll_create1	user/lib/syscall_ids.h	21;"	d
+SYS_epoll_ctl	os/syscall_ids.h	22;"	d
+SYS_epoll_ctl	user/lib/syscall_ids.h	22;"	d
+SYS_epoll_pwait	os/syscall_ids.h	23;"	d
+SYS_epoll_pwait	user/lib/syscall_ids.h	23;"	d
+SYS_eventfd2	os/syscall_ids.h	20;"	d
+SYS_eventfd2	user/lib/syscall_ids.h	20;"	d
+SYS_execve	os/syscall_ids.h	221;"	d
+SYS_execve	user/lib/syscall_ids.h	221;"	d
+SYS_execveat	os/syscall_ids.h	266;"	d
+SYS_execveat	user/lib/syscall_ids.h	266;"	d
+SYS_exit	os/syscall_ids.h	93;"	d
+SYS_exit	user/lib/syscall_ids.h	93;"	d
+SYS_exit_group	os/syscall_ids.h	94;"	d
+SYS_exit_group	user/lib/syscall_ids.h	94;"	d
+SYS_faccessat	os/syscall_ids.h	48;"	d
+SYS_faccessat	user/lib/syscall_ids.h	48;"	d
+SYS_faccessat2	os/syscall_ids.h	297;"	d
+SYS_fadvise64	os/syscall_ids.h	223;"	d
+SYS_fadvise64	user/lib/syscall_ids.h	223;"	d
+SYS_fallocate	os/syscall_ids.h	47;"	d
+SYS_fallocate	user/lib/syscall_ids.h	47;"	d
+SYS_fanotify_init	os/syscall_ids.h	247;"	d
+SYS_fanotify_init	user/lib/syscall_ids.h	247;"	d
+SYS_fanotify_mark	os/syscall_ids.h	248;"	d
+SYS_fanotify_mark	user/lib/syscall_ids.h	248;"	d
+SYS_fchdir	os/syscall_ids.h	50;"	d
+SYS_fchdir	user/lib/syscall_ids.h	50;"	d
+SYS_fchmod	os/syscall_ids.h	52;"	d
+SYS_fchmod	user/lib/syscall_ids.h	52;"	d
+SYS_fchmodat	os/syscall_ids.h	53;"	d
+SYS_fchmodat	user/lib/syscall_ids.h	53;"	d
+SYS_fchown	os/syscall_ids.h	55;"	d
+SYS_fchown	user/lib/syscall_ids.h	55;"	d
+SYS_fchownat	os/syscall_ids.h	54;"	d
+SYS_fchownat	user/lib/syscall_ids.h	54;"	d
+SYS_fcntl	os/syscall_ids.h	26;"	d
+SYS_fcntl	user/lib/syscall_ids.h	26;"	d
+SYS_fdatasync	os/syscall_ids.h	83;"	d
+SYS_fdatasync	user/lib/syscall_ids.h	83;"	d
+SYS_fgetxattr	os/syscall_ids.h	11;"	d
+SYS_fgetxattr	user/lib/syscall_ids.h	11;"	d
+SYS_finit_module	os/syscall_ids.h	258;"	d
+SYS_finit_module	user/lib/syscall_ids.h	258;"	d
+SYS_flistxattr	os/syscall_ids.h	14;"	d
+SYS_flistxattr	user/lib/syscall_ids.h	14;"	d
+SYS_flock	os/syscall_ids.h	33;"	d
+SYS_flock	user/lib/syscall_ids.h	33;"	d
+SYS_fremovexattr	os/syscall_ids.h	17;"	d
+SYS_fremovexattr	user/lib/syscall_ids.h	17;"	d
+SYS_fsconfig	os/syscall_ids.h	290;"	d
+SYS_fsetxattr	os/syscall_ids.h	8;"	d
+SYS_fsetxattr	user/lib/syscall_ids.h	8;"	d
+SYS_fsmount	os/syscall_ids.h	291;"	d
+SYS_fsopen	os/syscall_ids.h	289;"	d
+SYS_fspick	os/syscall_ids.h	292;"	d
+SYS_fstat	os/syscall_ids.h	80;"	d
+SYS_fstat	user/lib/syscall_ids.h	80;"	d
+SYS_fstatat	os/syscall_ids.h	79;"	d
+SYS_fstatat	user/lib/syscall_ids.h	79;"	d
+SYS_fstatfs	os/syscall_ids.h	44;"	d
+SYS_fstatfs	user/lib/syscall_ids.h	44;"	d
+SYS_fsync	os/syscall_ids.h	82;"	d
+SYS_fsync	user/lib/syscall_ids.h	82;"	d
+SYS_ftruncate	os/syscall_ids.h	46;"	d
+SYS_ftruncate	user/lib/syscall_ids.h	46;"	d
+SYS_futex	os/syscall_ids.h	98;"	d
+SYS_futex	user/lib/syscall_ids.h	98;"	d
+SYS_get_mempolicy	os/syscall_ids.h	236;"	d
+SYS_get_mempolicy	user/lib/syscall_ids.h	236;"	d
+SYS_get_robust_list	os/syscall_ids.h	100;"	d
+SYS_get_robust_list	user/lib/syscall_ids.h	100;"	d
+SYS_getcpu	os/syscall_ids.h	168;"	d
+SYS_getcpu	user/lib/syscall_ids.h	168;"	d
+SYS_getcwd	os/syscall_ids.h	18;"	d
+SYS_getcwd	user/lib/syscall_ids.h	18;"	d
+SYS_getdents64	os/syscall_ids.h	61;"	d
+SYS_getdents64	user/lib/syscall_ids.h	61;"	d
+SYS_getegid	os/syscall_ids.h	177;"	d
+SYS_getegid	user/lib/syscall_ids.h	177;"	d
+SYS_geteuid	os/syscall_ids.h	175;"	d
+SYS_geteuid	user/lib/syscall_ids.h	175;"	d
+SYS_getgid	os/syscall_ids.h	176;"	d
+SYS_getgid	user/lib/syscall_ids.h	176;"	d
+SYS_getgroups	os/syscall_ids.h	158;"	d
+SYS_getgroups	user/lib/syscall_ids.h	158;"	d
+SYS_getitimer	os/syscall_ids.h	102;"	d
+SYS_getitimer	user/lib/syscall_ids.h	102;"	d
+SYS_getpeername	os/syscall_ids.h	205;"	d
+SYS_getpeername	user/lib/syscall_ids.h	205;"	d
+SYS_getpgid	os/syscall_ids.h	155;"	d
+SYS_getpgid	user/lib/syscall_ids.h	155;"	d
+SYS_getpid	os/syscall_ids.h	172;"	d
+SYS_getpid	user/lib/syscall_ids.h	172;"	d
+SYS_getppid	os/syscall_ids.h	173;"	d
+SYS_getppid	user/lib/syscall_ids.h	173;"	d
+SYS_getpriority	os/syscall_ids.h	141;"	d
+SYS_getpriority	user/lib/syscall_ids.h	141;"	d
+SYS_getrandom	os/syscall_ids.h	263;"	d
+SYS_getrandom	user/lib/syscall_ids.h	263;"	d
+SYS_getresgid	os/syscall_ids.h	150;"	d
+SYS_getresgid	user/lib/syscall_ids.h	150;"	d
+SYS_getresuid	os/syscall_ids.h	148;"	d
+SYS_getresuid	user/lib/syscall_ids.h	148;"	d
+SYS_getrlimit	os/syscall_ids.h	163;"	d
+SYS_getrlimit	user/lib/syscall_ids.h	163;"	d
+SYS_getrusage	os/syscall_ids.h	165;"	d
+SYS_getrusage	user/lib/syscall_ids.h	165;"	d
+SYS_getsid	os/syscall_ids.h	156;"	d
+SYS_getsid	user/lib/syscall_ids.h	156;"	d
+SYS_getsockname	os/syscall_ids.h	204;"	d
+SYS_getsockname	user/lib/syscall_ids.h	204;"	d
+SYS_getsockopt	os/syscall_ids.h	209;"	d
+SYS_getsockopt	user/lib/syscall_ids.h	209;"	d
+SYS_gettid	os/syscall_ids.h	178;"	d
+SYS_gettid	user/lib/syscall_ids.h	178;"	d
+SYS_gettimeofday	os/syscall_ids.h	169;"	d
+SYS_gettimeofday	user/lib/syscall_ids.h	169;"	d
+SYS_getuid	os/syscall_ids.h	174;"	d
+SYS_getuid	user/lib/syscall_ids.h	174;"	d
+SYS_getxattr	os/syscall_ids.h	9;"	d
+SYS_getxattr	user/lib/syscall_ids.h	9;"	d
+SYS_init_module	os/syscall_ids.h	105;"	d
+SYS_init_module	user/lib/syscall_ids.h	105;"	d
+SYS_inotify_add_watch	os/syscall_ids.h	28;"	d
+SYS_inotify_add_watch	user/lib/syscall_ids.h	28;"	d
+SYS_inotify_init1	os/syscall_ids.h	27;"	d
+SYS_inotify_init1	user/lib/syscall_ids.h	27;"	d
+SYS_inotify_rm_watch	os/syscall_ids.h	29;"	d
+SYS_inotify_rm_watch	user/lib/syscall_ids.h	29;"	d
+SYS_io_cancel	os/syscall_ids.h	4;"	d
+SYS_io_cancel	user/lib/syscall_ids.h	4;"	d
+SYS_io_destroy	os/syscall_ids.h	2;"	d
+SYS_io_destroy	user/lib/syscall_ids.h	2;"	d
+SYS_io_getevents	os/syscall_ids.h	5;"	d
+SYS_io_getevents	user/lib/syscall_ids.h	5;"	d
+SYS_io_pgetevents	os/syscall_ids.h	277;"	d
+SYS_io_pgetevents	user/lib/syscall_ids.h	277;"	d
+SYS_io_setup	os/syscall_ids.h	1;"	d
+SYS_io_setup	user/lib/syscall_ids.h	1;"	d
+SYS_io_submit	os/syscall_ids.h	3;"	d
+SYS_io_submit	user/lib/syscall_ids.h	3;"	d
+SYS_io_uring_enter	os/syscall_ids.h	285;"	d
+SYS_io_uring_register	os/syscall_ids.h	286;"	d
+SYS_io_uring_setup	os/syscall_ids.h	284;"	d
+SYS_ioctl	os/syscall_ids.h	30;"	d
+SYS_ioctl	user/lib/syscall_ids.h	30;"	d
+SYS_ioprio_get	os/syscall_ids.h	32;"	d
+SYS_ioprio_get	user/lib/syscall_ids.h	32;"	d
+SYS_ioprio_set	os/syscall_ids.h	31;"	d
+SYS_ioprio_set	user/lib/syscall_ids.h	31;"	d
+SYS_kcmp	os/syscall_ids.h	257;"	d
+SYS_kcmp	user/lib/syscall_ids.h	257;"	d
+SYS_kexec_file_load	os/syscall_ids.h	279;"	d
+SYS_kexec_file_load	user/lib/syscall_ids.h	279;"	d
+SYS_kexec_load	os/syscall_ids.h	104;"	d
+SYS_kexec_load	user/lib/syscall_ids.h	104;"	d
+SYS_keyctl	os/syscall_ids.h	219;"	d
+SYS_keyctl	user/lib/syscall_ids.h	219;"	d
+SYS_kill	os/syscall_ids.h	129;"	d
+SYS_kill	user/lib/syscall_ids.h	129;"	d
+SYS_lgetxattr	os/syscall_ids.h	10;"	d
+SYS_lgetxattr	user/lib/syscall_ids.h	10;"	d
+SYS_linkat	os/syscall_ids.h	38;"	d
+SYS_linkat	user/lib/syscall_ids.h	38;"	d
+SYS_listen	os/syscall_ids.h	201;"	d
+SYS_listen	user/lib/syscall_ids.h	201;"	d
+SYS_listxattr	os/syscall_ids.h	12;"	d
+SYS_listxattr	user/lib/syscall_ids.h	12;"	d
+SYS_llistxattr	os/syscall_ids.h	13;"	d
+SYS_llistxattr	user/lib/syscall_ids.h	13;"	d
+SYS_lookup_dcookie	os/syscall_ids.h	19;"	d
+SYS_lookup_dcookie	user/lib/syscall_ids.h	19;"	d
+SYS_lremovexattr	os/syscall_ids.h	16;"	d
+SYS_lremovexattr	user/lib/syscall_ids.h	16;"	d
+SYS_lseek	os/syscall_ids.h	62;"	d
+SYS_lseek	user/lib/syscall_ids.h	62;"	d
+SYS_lsetxattr	os/syscall_ids.h	7;"	d
+SYS_lsetxattr	user/lib/syscall_ids.h	7;"	d
+SYS_madvise	os/syscall_ids.h	233;"	d
+SYS_madvise	user/lib/syscall_ids.h	233;"	d
+SYS_mailread	user/lib/syscall_ids.h	282;"	d
+SYS_mailwrite	user/lib/syscall_ids.h	283;"	d
+SYS_mbind	os/syscall_ids.h	235;"	d
+SYS_mbind	user/lib/syscall_ids.h	235;"	d
+SYS_membarrier	os/syscall_ids.h	268;"	d
+SYS_membarrier	user/lib/syscall_ids.h	268;"	d
+SYS_memfd_create	os/syscall_ids.h	264;"	d
+SYS_memfd_create	user/lib/syscall_ids.h	264;"	d
+SYS_migrate_pages	os/syscall_ids.h	238;"	d
+SYS_migrate_pages	user/lib/syscall_ids.h	238;"	d
+SYS_mincore	os/syscall_ids.h	232;"	d
+SYS_mincore	user/lib/syscall_ids.h	232;"	d
+SYS_mkdirat	os/syscall_ids.h	35;"	d
+SYS_mkdirat	user/lib/syscall_ids.h	35;"	d
+SYS_mknodat	os/syscall_ids.h	34;"	d
+SYS_mknodat	user/lib/syscall_ids.h	34;"	d
+SYS_mlock	os/syscall_ids.h	228;"	d
+SYS_mlock	user/lib/syscall_ids.h	228;"	d
+SYS_mlock2	os/syscall_ids.h	269;"	d
+SYS_mlock2	user/lib/syscall_ids.h	269;"	d
+SYS_mlockall	os/syscall_ids.h	230;"	d
+SYS_mlockall	user/lib/syscall_ids.h	230;"	d
+SYS_mmap	os/syscall_ids.h	222;"	d
+SYS_mmap	user/lib/syscall_ids.h	222;"	d
+SYS_mount	os/syscall_ids.h	40;"	d
+SYS_mount	user/lib/syscall_ids.h	40;"	d
+SYS_move_mount	os/syscall_ids.h	288;"	d
+SYS_move_pages	os/syscall_ids.h	239;"	d
+SYS_move_pages	user/lib/syscall_ids.h	239;"	d
+SYS_mprotect	os/syscall_ids.h	226;"	d
+SYS_mprotect	user/lib/syscall_ids.h	226;"	d
+SYS_mq_getsetattr	os/syscall_ids.h	185;"	d
+SYS_mq_getsetattr	user/lib/syscall_ids.h	185;"	d
+SYS_mq_notify	os/syscall_ids.h	184;"	d
+SYS_mq_notify	user/lib/syscall_ids.h	184;"	d
+SYS_mq_open	os/syscall_ids.h	180;"	d
+SYS_mq_open	user/lib/syscall_ids.h	180;"	d
+SYS_mq_timedreceive	os/syscall_ids.h	183;"	d
+SYS_mq_timedreceive	user/lib/syscall_ids.h	183;"	d
+SYS_mq_timedsend	os/syscall_ids.h	182;"	d
+SYS_mq_timedsend	user/lib/syscall_ids.h	182;"	d
+SYS_mq_unlink	os/syscall_ids.h	181;"	d
+SYS_mq_unlink	user/lib/syscall_ids.h	181;"	d
+SYS_mremap	os/syscall_ids.h	216;"	d
+SYS_mremap	user/lib/syscall_ids.h	216;"	d
+SYS_msgctl	os/syscall_ids.h	187;"	d
+SYS_msgctl	user/lib/syscall_ids.h	187;"	d
+SYS_msgget	os/syscall_ids.h	186;"	d
+SYS_msgget	user/lib/syscall_ids.h	186;"	d
+SYS_msgrcv	os/syscall_ids.h	188;"	d
+SYS_msgrcv	user/lib/syscall_ids.h	188;"	d
+SYS_msgsnd	os/syscall_ids.h	189;"	d
+SYS_msgsnd	user/lib/syscall_ids.h	189;"	d
+SYS_msync	os/syscall_ids.h	227;"	d
+SYS_msync	user/lib/syscall_ids.h	227;"	d
+SYS_munlock	os/syscall_ids.h	229;"	d
+SYS_munlock	user/lib/syscall_ids.h	229;"	d
+SYS_munlockall	os/syscall_ids.h	231;"	d
+SYS_munlockall	user/lib/syscall_ids.h	231;"	d
+SYS_munmap	os/syscall_ids.h	215;"	d
+SYS_munmap	user/lib/syscall_ids.h	215;"	d
+SYS_mutex_create	user/lib/syscall_ids.h	287;"	d
+SYS_mutex_lock	user/lib/syscall_ids.h	288;"	d
+SYS_mutex_unlock	user/lib/syscall_ids.h	289;"	d
+SYS_name_to_handle_at	os/syscall_ids.h	249;"	d
+SYS_name_to_handle_at	user/lib/syscall_ids.h	249;"	d
+SYS_nanosleep	os/syscall_ids.h	101;"	d
+SYS_nanosleep	user/lib/syscall_ids.h	101;"	d
+SYS_nfsservctl	os/syscall_ids.h	42;"	d
+SYS_nfsservctl	user/lib/syscall_ids.h	42;"	d
+SYS_open_by_handle_at	os/syscall_ids.h	250;"	d
+SYS_open_by_handle_at	user/lib/syscall_ids.h	250;"	d
+SYS_open_tree	os/syscall_ids.h	287;"	d
+SYS_openat	os/syscall_ids.h	56;"	d
+SYS_openat	user/lib/syscall_ids.h	56;"	d
+SYS_openat2	os/syscall_ids.h	295;"	d
+SYS_perf_event_open	os/syscall_ids.h	241;"	d
+SYS_perf_event_open	user/lib/syscall_ids.h	241;"	d
+SYS_personality	os/syscall_ids.h	92;"	d
+SYS_personality	user/lib/syscall_ids.h	92;"	d
+SYS_pidfd_getfd	os/syscall_ids.h	296;"	d
+SYS_pidfd_open	os/syscall_ids.h	293;"	d
+SYS_pidfd_send_signal	os/syscall_ids.h	283;"	d
+SYS_pipe2	os/syscall_ids.h	59;"	d
+SYS_pipe2	user/lib/syscall_ids.h	59;"	d
+SYS_pivot_root	os/syscall_ids.h	41;"	d
+SYS_pivot_root	user/lib/syscall_ids.h	41;"	d
+SYS_pkey_alloc	os/syscall_ids.h	274;"	d
+SYS_pkey_alloc	user/lib/syscall_ids.h	274;"	d
+SYS_pkey_free	os/syscall_ids.h	275;"	d
+SYS_pkey_free	user/lib/syscall_ids.h	275;"	d
+SYS_pkey_mprotect	os/syscall_ids.h	273;"	d
+SYS_pkey_mprotect	user/lib/syscall_ids.h	273;"	d
+SYS_ppoll	os/syscall_ids.h	73;"	d
+SYS_ppoll	user/lib/syscall_ids.h	73;"	d
+SYS_prctl	os/syscall_ids.h	167;"	d
+SYS_prctl	user/lib/syscall_ids.h	167;"	d
+SYS_pread64	os/syscall_ids.h	67;"	d
+SYS_pread64	user/lib/syscall_ids.h	67;"	d
+SYS_preadv	os/syscall_ids.h	69;"	d
+SYS_preadv	user/lib/syscall_ids.h	69;"	d
+SYS_preadv2	os/syscall_ids.h	271;"	d
+SYS_preadv2	user/lib/syscall_ids.h	271;"	d
+SYS_prlimit64	os/syscall_ids.h	246;"	d
+SYS_prlimit64	user/lib/syscall_ids.h	246;"	d
+SYS_process_vm_readv	os/syscall_ids.h	255;"	d
+SYS_process_vm_readv	user/lib/syscall_ids.h	255;"	d
+SYS_process_vm_writev	os/syscall_ids.h	256;"	d
+SYS_process_vm_writev	user/lib/syscall_ids.h	256;"	d
+SYS_pselect6	os/syscall_ids.h	72;"	d
+SYS_pselect6	user/lib/syscall_ids.h	72;"	d
+SYS_ptrace	os/syscall_ids.h	117;"	d
+SYS_ptrace	user/lib/syscall_ids.h	117;"	d
+SYS_pwrite64	os/syscall_ids.h	68;"	d
+SYS_pwrite64	user/lib/syscall_ids.h	68;"	d
+SYS_pwritev	os/syscall_ids.h	70;"	d
+SYS_pwritev	user/lib/syscall_ids.h	70;"	d
+SYS_pwritev2	os/syscall_ids.h	272;"	d
+SYS_pwritev2	user/lib/syscall_ids.h	272;"	d
+SYS_quotactl	os/syscall_ids.h	60;"	d
+SYS_quotactl	user/lib/syscall_ids.h	60;"	d
+SYS_read	os/syscall_ids.h	63;"	d
+SYS_read	user/lib/syscall_ids.h	63;"	d
+SYS_readahead	os/syscall_ids.h	213;"	d
+SYS_readahead	user/lib/syscall_ids.h	213;"	d
+SYS_readlinkat	os/syscall_ids.h	78;"	d
+SYS_readlinkat	user/lib/syscall_ids.h	78;"	d
+SYS_readv	os/syscall_ids.h	65;"	d
+SYS_readv	user/lib/syscall_ids.h	65;"	d
+SYS_reboot	os/syscall_ids.h	142;"	d
+SYS_reboot	user/lib/syscall_ids.h	142;"	d
+SYS_recvfrom	os/syscall_ids.h	207;"	d
+SYS_recvfrom	user/lib/syscall_ids.h	207;"	d
+SYS_recvmmsg	os/syscall_ids.h	243;"	d
+SYS_recvmmsg	user/lib/syscall_ids.h	243;"	d
+SYS_recvmsg	os/syscall_ids.h	212;"	d
+SYS_recvmsg	user/lib/syscall_ids.h	212;"	d
+SYS_remap_file_pages	os/syscall_ids.h	234;"	d
+SYS_remap_file_pages	user/lib/syscall_ids.h	234;"	d
+SYS_removexattr	os/syscall_ids.h	15;"	d
+SYS_removexattr	user/lib/syscall_ids.h	15;"	d
+SYS_renameat2	os/syscall_ids.h	261;"	d
+SYS_renameat2	user/lib/syscall_ids.h	261;"	d
+SYS_request_key	os/syscall_ids.h	218;"	d
+SYS_request_key	user/lib/syscall_ids.h	218;"	d
+SYS_restart_syscall	os/syscall_ids.h	128;"	d
+SYS_restart_syscall	user/lib/syscall_ids.h	128;"	d
+SYS_riscv_flush_icache	os/syscall_ids.h	298;"	d
+SYS_riscv_flush_icache	user/lib/syscall_ids.h	280;"	d
+SYS_rseq	os/syscall_ids.h	278;"	d
+SYS_rseq	user/lib/syscall_ids.h	278;"	d
+SYS_rt_sigaction	os/syscall_ids.h	134;"	d
+SYS_rt_sigaction	user/lib/syscall_ids.h	134;"	d
+SYS_rt_sigpending	os/syscall_ids.h	136;"	d
+SYS_rt_sigpending	user/lib/syscall_ids.h	136;"	d
+SYS_rt_sigprocmask	os/syscall_ids.h	135;"	d
+SYS_rt_sigprocmask	user/lib/syscall_ids.h	135;"	d
+SYS_rt_sigqueueinfo	os/syscall_ids.h	138;"	d
+SYS_rt_sigqueueinfo	user/lib/syscall_ids.h	138;"	d
+SYS_rt_sigreturn	os/syscall_ids.h	139;"	d
+SYS_rt_sigreturn	user/lib/syscall_ids.h	139;"	d
+SYS_rt_sigsuspend	os/syscall_ids.h	133;"	d
+SYS_rt_sigsuspend	user/lib/syscall_ids.h	133;"	d
+SYS_rt_sigtimedwait	os/syscall_ids.h	137;"	d
+SYS_rt_sigtimedwait	user/lib/syscall_ids.h	137;"	d
+SYS_rt_tgsigqueueinfo	os/syscall_ids.h	240;"	d
+SYS_rt_tgsigqueueinfo	user/lib/syscall_ids.h	240;"	d
+SYS_sbrk	user/lib/syscall_ids.h	214;"	d
+SYS_sched_get_priority_max	os/syscall_ids.h	125;"	d
+SYS_sched_get_priority_max	user/lib/syscall_ids.h	125;"	d
+SYS_sched_get_priority_min	os/syscall_ids.h	126;"	d
+SYS_sched_get_priority_min	user/lib/syscall_ids.h	126;"	d
+SYS_sched_getaffinity	os/syscall_ids.h	123;"	d
+SYS_sched_getaffinity	user/lib/syscall_ids.h	123;"	d
+SYS_sched_getattr	os/syscall_ids.h	260;"	d
+SYS_sched_getattr	user/lib/syscall_ids.h	260;"	d
+SYS_sched_getparam	os/syscall_ids.h	121;"	d
+SYS_sched_getparam	user/lib/syscall_ids.h	121;"	d
+SYS_sched_getscheduler	os/syscall_ids.h	120;"	d
+SYS_sched_getscheduler	user/lib/syscall_ids.h	120;"	d
+SYS_sched_rr_get_interval	os/syscall_ids.h	127;"	d
+SYS_sched_rr_get_interval	user/lib/syscall_ids.h	127;"	d
+SYS_sched_setaffinity	os/syscall_ids.h	122;"	d
+SYS_sched_setaffinity	user/lib/syscall_ids.h	122;"	d
+SYS_sched_setattr	os/syscall_ids.h	259;"	d
+SYS_sched_setattr	user/lib/syscall_ids.h	259;"	d
+SYS_sched_setparam	os/syscall_ids.h	118;"	d
+SYS_sched_setparam	user/lib/syscall_ids.h	118;"	d
+SYS_sched_setscheduler	os/syscall_ids.h	119;"	d
+SYS_sched_setscheduler	user/lib/syscall_ids.h	119;"	d
+SYS_sched_yield	os/syscall_ids.h	124;"	d
+SYS_sched_yield	user/lib/syscall_ids.h	124;"	d
+SYS_seccomp	os/syscall_ids.h	262;"	d
+SYS_seccomp	user/lib/syscall_ids.h	262;"	d
+SYS_semaphore_create	user/lib/syscall_ids.h	290;"	d
+SYS_semaphore_down	user/lib/syscall_ids.h	293;"	d
+SYS_semaphore_up	user/lib/syscall_ids.h	291;"	d
+SYS_semctl	os/syscall_ids.h	191;"	d
+SYS_semctl	user/lib/syscall_ids.h	191;"	d
+SYS_semget	os/syscall_ids.h	190;"	d
+SYS_semget	user/lib/syscall_ids.h	190;"	d
+SYS_semop	os/syscall_ids.h	193;"	d
+SYS_semop	user/lib/syscall_ids.h	193;"	d
+SYS_semtimedop	os/syscall_ids.h	192;"	d
+SYS_semtimedop	user/lib/syscall_ids.h	192;"	d
+SYS_sendfile	os/syscall_ids.h	71;"	d
+SYS_sendfile	user/lib/syscall_ids.h	71;"	d
+SYS_sendmmsg	os/syscall_ids.h	254;"	d
+SYS_sendmmsg	user/lib/syscall_ids.h	254;"	d
+SYS_sendmsg	os/syscall_ids.h	211;"	d
+SYS_sendmsg	user/lib/syscall_ids.h	211;"	d
+SYS_sendto	os/syscall_ids.h	206;"	d
+SYS_sendto	user/lib/syscall_ids.h	206;"	d
+SYS_set_mempolicy	os/syscall_ids.h	237;"	d
+SYS_set_mempolicy	user/lib/syscall_ids.h	237;"	d
+SYS_set_robust_list	os/syscall_ids.h	99;"	d
+SYS_set_robust_list	user/lib/syscall_ids.h	99;"	d
+SYS_set_tid_address	os/syscall_ids.h	96;"	d
+SYS_set_tid_address	user/lib/syscall_ids.h	96;"	d
+SYS_setdomainname	os/syscall_ids.h	162;"	d
+SYS_setdomainname	user/lib/syscall_ids.h	162;"	d
+SYS_setfsgid	os/syscall_ids.h	152;"	d
+SYS_setfsgid	user/lib/syscall_ids.h	152;"	d
+SYS_setfsuid	os/syscall_ids.h	151;"	d
+SYS_setfsuid	user/lib/syscall_ids.h	151;"	d
+SYS_setgid	os/syscall_ids.h	144;"	d
+SYS_setgid	user/lib/syscall_ids.h	144;"	d
+SYS_setgroups	os/syscall_ids.h	159;"	d
+SYS_setgroups	user/lib/syscall_ids.h	159;"	d
+SYS_sethostname	os/syscall_ids.h	161;"	d
+SYS_sethostname	user/lib/syscall_ids.h	161;"	d
+SYS_setitimer	os/syscall_ids.h	103;"	d
+SYS_setitimer	user/lib/syscall_ids.h	103;"	d
+SYS_setns	os/syscall_ids.h	253;"	d
+SYS_setns	user/lib/syscall_ids.h	253;"	d
+SYS_setpgid	os/syscall_ids.h	154;"	d
+SYS_setpgid	user/lib/syscall_ids.h	154;"	d
+SYS_setpriority	os/syscall_ids.h	140;"	d
+SYS_setpriority	user/lib/syscall_ids.h	140;"	d
+SYS_setregid	os/syscall_ids.h	143;"	d
+SYS_setregid	user/lib/syscall_ids.h	143;"	d
+SYS_setresgid	os/syscall_ids.h	149;"	d
+SYS_setresgid	user/lib/syscall_ids.h	149;"	d
+SYS_setresuid	os/syscall_ids.h	147;"	d
+SYS_setresuid	user/lib/syscall_ids.h	147;"	d
+SYS_setreuid	os/syscall_ids.h	145;"	d
+SYS_setreuid	user/lib/syscall_ids.h	145;"	d
+SYS_setrlimit	os/syscall_ids.h	164;"	d
+SYS_setrlimit	user/lib/syscall_ids.h	164;"	d
+SYS_setsid	os/syscall_ids.h	157;"	d
+SYS_setsid	user/lib/syscall_ids.h	157;"	d
+SYS_setsockopt	os/syscall_ids.h	208;"	d
+SYS_setsockopt	user/lib/syscall_ids.h	208;"	d
+SYS_settimeofday	os/syscall_ids.h	170;"	d
+SYS_settimeofday	user/lib/syscall_ids.h	170;"	d
+SYS_setuid	os/syscall_ids.h	146;"	d
+SYS_setuid	user/lib/syscall_ids.h	146;"	d
+SYS_setxattr	os/syscall_ids.h	6;"	d
+SYS_setxattr	user/lib/syscall_ids.h	6;"	d
+SYS_shmat	os/syscall_ids.h	196;"	d
+SYS_shmat	user/lib/syscall_ids.h	196;"	d
+SYS_shmctl	os/syscall_ids.h	195;"	d
+SYS_shmctl	user/lib/syscall_ids.h	195;"	d
+SYS_shmdt	os/syscall_ids.h	197;"	d
+SYS_shmdt	user/lib/syscall_ids.h	197;"	d
+SYS_shmget	os/syscall_ids.h	194;"	d
+SYS_shmget	user/lib/syscall_ids.h	194;"	d
+SYS_shutdown	os/syscall_ids.h	210;"	d
+SYS_shutdown	user/lib/syscall_ids.h	210;"	d
+SYS_sigaltstack	os/syscall_ids.h	132;"	d
+SYS_sigaltstack	user/lib/syscall_ids.h	132;"	d
+SYS_signalfd4	os/syscall_ids.h	74;"	d
+SYS_signalfd4	user/lib/syscall_ids.h	74;"	d
+SYS_socket	os/syscall_ids.h	198;"	d
+SYS_socket	user/lib/syscall_ids.h	198;"	d
+SYS_socketpair	os/syscall_ids.h	199;"	d
+SYS_socketpair	user/lib/syscall_ids.h	199;"	d
+SYS_spawn	user/lib/syscall_ids.h	281;"	d
+SYS_splice	os/syscall_ids.h	76;"	d
+SYS_splice	user/lib/syscall_ids.h	76;"	d
+SYS_statfs	os/syscall_ids.h	43;"	d
+SYS_statfs	user/lib/syscall_ids.h	43;"	d
+SYS_statx	os/syscall_ids.h	276;"	d
+SYS_statx	user/lib/syscall_ids.h	276;"	d
+SYS_swapoff	os/syscall_ids.h	225;"	d
+SYS_swapoff	user/lib/syscall_ids.h	225;"	d
+SYS_swapon	os/syscall_ids.h	224;"	d
+SYS_swapon	user/lib/syscall_ids.h	224;"	d
+SYS_symlinkat	os/syscall_ids.h	37;"	d
+SYS_symlinkat	user/lib/syscall_ids.h	37;"	d
+SYS_sync	os/syscall_ids.h	81;"	d
+SYS_sync	user/lib/syscall_ids.h	81;"	d
+SYS_sync_file_range	os/syscall_ids.h	84;"	d
+SYS_sync_file_range	user/lib/syscall_ids.h	84;"	d
+SYS_syncfs	os/syscall_ids.h	252;"	d
+SYS_syncfs	user/lib/syscall_ids.h	252;"	d
+SYS_sysinfo	os/syscall_ids.h	179;"	d
+SYS_sysinfo	user/lib/syscall_ids.h	179;"	d
+SYS_syslog	os/syscall_ids.h	116;"	d
+SYS_syslog	user/lib/syscall_ids.h	116;"	d
+SYS_tee	os/syscall_ids.h	77;"	d
+SYS_tee	user/lib/syscall_ids.h	77;"	d
+SYS_tgkill	os/syscall_ids.h	131;"	d
+SYS_tgkill	user/lib/syscall_ids.h	131;"	d
+SYS_thread_create	user/lib/syscall_ids.h	285;"	d
+SYS_timer_create	os/syscall_ids.h	107;"	d
+SYS_timer_create	user/lib/syscall_ids.h	107;"	d
+SYS_timer_delete	os/syscall_ids.h	111;"	d
+SYS_timer_delete	user/lib/syscall_ids.h	111;"	d
+SYS_timer_getoverrun	os/syscall_ids.h	109;"	d
+SYS_timer_getoverrun	user/lib/syscall_ids.h	109;"	d
+SYS_timer_gettime	os/syscall_ids.h	108;"	d
+SYS_timer_gettime	user/lib/syscall_ids.h	108;"	d
+SYS_timer_settime	os/syscall_ids.h	110;"	d
+SYS_timer_settime	user/lib/syscall_ids.h	110;"	d
+SYS_timerfd_create	os/syscall_ids.h	85;"	d
+SYS_timerfd_create	user/lib/syscall_ids.h	85;"	d
+SYS_timerfd_gettime	os/syscall_ids.h	87;"	d
+SYS_timerfd_gettime	user/lib/syscall_ids.h	87;"	d
+SYS_timerfd_settime	os/syscall_ids.h	86;"	d
+SYS_timerfd_settime	user/lib/syscall_ids.h	86;"	d
+SYS_times	os/syscall_ids.h	153;"	d
+SYS_times	user/lib/syscall_ids.h	153;"	d
+SYS_tkill	os/syscall_ids.h	130;"	d
+SYS_tkill	user/lib/syscall_ids.h	130;"	d
+SYS_trace	user/lib/syscall_ids.h	284;"	d
+SYS_truncate	os/syscall_ids.h	45;"	d
+SYS_truncate	user/lib/syscall_ids.h	45;"	d
+SYS_umask	os/syscall_ids.h	166;"	d
+SYS_umask	user/lib/syscall_ids.h	166;"	d
+SYS_umount2	os/syscall_ids.h	39;"	d
+SYS_umount2	user/lib/syscall_ids.h	39;"	d
+SYS_uname	os/syscall_ids.h	160;"	d
+SYS_uname	user/lib/syscall_ids.h	160;"	d
+SYS_unlinkat	os/syscall_ids.h	36;"	d
+SYS_unlinkat	user/lib/syscall_ids.h	36;"	d
+SYS_unshare	os/syscall_ids.h	97;"	d
+SYS_unshare	user/lib/syscall_ids.h	97;"	d
+SYS_userfaultfd	os/syscall_ids.h	267;"	d
+SYS_userfaultfd	user/lib/syscall_ids.h	267;"	d
+SYS_utimensat	os/syscall_ids.h	88;"	d
+SYS_utimensat	user/lib/syscall_ids.h	88;"	d
+SYS_vhangup	os/syscall_ids.h	58;"	d
+SYS_vhangup	user/lib/syscall_ids.h	58;"	d
+SYS_vmsplice	os/syscall_ids.h	75;"	d
+SYS_vmsplice	user/lib/syscall_ids.h	75;"	d
+SYS_wait4	os/syscall_ids.h	245;"	d
+SYS_wait4	user/lib/syscall_ids.h	245;"	d
+SYS_waitid	os/syscall_ids.h	95;"	d
+SYS_waitid	user/lib/syscall_ids.h	95;"	d
+SYS_waittid	user/lib/syscall_ids.h	286;"	d
+SYS_write	os/syscall_ids.h	64;"	d
+SYS_write	user/lib/syscall_ids.h	64;"	d
+SYS_writev	os/syscall_ids.h	66;"	d
+SYS_writev	user/lib/syscall_ids.h	66;"	d
+Stat	user/include/stddef.h	/^} Stat;$/;"	t	typeref:struct:__anon4
+StoreAccessFault	os/trap.h	/^	StoreAccessFault = 7,$/;"	e	enum:Exception
+StoreMisaligned	os/trap.h	/^	StoreMisaligned = 6,$/;"	e	enum:Exception
+StorePageFault	os/trap.h	/^	StorePageFault = 15,$/;"	e	enum:Exception
+SupervisorEnvCall	os/trap.h	/^	SupervisorEnvCall = 9,$/;"	e	enum:Exception
+SupervisorExternal	os/trap.h	/^	SupervisorExternal,$/;"	e	enum:Interrupt
+SupervisorSoft	os/trap.h	/^	SupervisorSoft,$/;"	e	enum:Interrupt
+SupervisorTimer	os/trap.h	/^	SupervisorTimer,$/;"	e	enum:Interrupt
+TARGET_DIR	os/kernelld.py	/^TARGET_DIR = "..\/user\/target\/"$/;"	v
+TARGET_DIR	os/pack.py	/^TARGET_DIR = "..\/user\/target"$/;"	v
+TARGET_DIR	scripts/kernelld.py	/^TARGET_DIR = ".\/user\/target\/bin\/"$/;"	v
+TARGET_DIR	scripts/pack.py	/^TARGET_DIR = ".\/user\/target\/bin\/"$/;"	v
+TESTS	user/src/ch5_mergetest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch5_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch5b_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch5t_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch6_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch6b_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch7b_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch8_usertest.c	/^const char *TESTS[] = {$/;"	v
+TESTS	user/src/ch8b_usertest.c	/^const char *TESTS[] = {$/;"	v
+THREAD_N	user/src/ch8_sem1_deadlock.c	11;"	d	file:
+THREAD_N	user/src/ch8_sem2_deadlock.c	12;"	d	file:
+TICKS_PER_SEC	os/timer.h	6;"	d
+TIMER_H	os/timer.h	2;"	d
+TOOLPREFIX	Makefile	/^TOOLPREFIX = riscv64-unknown-elf-$/;"	m
+TRACE_READ	user/include/unistd.h	/^	TRACE_READ,$/;"	e	enum:trace_request
+TRACE_SYSCALL	user/include/unistd.h	/^	TRACE_SYSCALL,$/;"	e	enum:trace_request
+TRACE_WRITE	user/include/unistd.h	/^	TRACE_WRITE,$/;"	e	enum:trace_request
+TRAP_H	os/trap.h	2;"	d
+TRAP_PAGE_SIZE	os/loader.h	14;"	d
+TYPES_H	os/types.h	2;"	d
+TimeVal	os/timer.h	/^} TimeVal;$/;"	t	typeref:struct:__anon2
+TimeVal	user/include/stddef.h	/^} TimeVal;$/;"	t	typeref:struct:__anon3
+UCHAR_MAX	user/include/stddef.h	23;"	d
+UINT_MAX	user/include/stddef.h	21;"	d
+ULONG_MAX	user/include/stddef.h	18;"	d
+UNUSED	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+USED	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+USER_STACK_SIZE	os/loader.h	13;"	d
+USER_TEST	user/src/usertest.h	2;"	d
+USE_LOG_DEBUG	os/log.h	35;"	d
+USE_LOG_DEBUG	os/log.h	44;"	d
+USE_LOG_ERROR	os/log.h	11;"	d
+USE_LOG_ERROR	os/log.h	17;"	d
+USE_LOG_ERROR	os/log.h	24;"	d
+USE_LOG_ERROR	os/log.h	32;"	d
+USE_LOG_ERROR	os/log.h	41;"	d
+USE_LOG_INFO	os/log.h	26;"	d
+USE_LOG_INFO	os/log.h	34;"	d
+USE_LOG_INFO	os/log.h	43;"	d
+USE_LOG_TRACE	os/log.h	45;"	d
+USE_LOG_WARN	os/log.h	18;"	d
+USE_LOG_WARN	os/log.h	25;"	d
+USE_LOG_WARN	os/log.h	33;"	d
+USE_LOG_WARN	os/log.h	42;"	d
+UserEnvCall	os/trap.h	/^	UserEnvCall = 8,$/;"	e	enum:Exception
+UserExternal	os/trap.h	/^	UserExternal = 8,$/;"	e	enum:Interrupt
+UserSoft	os/trap.h	/^	UserSoft = 0,$/;"	e	enum:Interrupt
+UserTimer	os/trap.h	/^	UserTimer = 4,$/;"	e	enum:Interrupt
+VDSO_USEFUL	user/lib/arch/riscv/syscall_arch.h	74;"	d
+WIDTH	user/src/ch3b_yield0.c	/^const int WIDTH = 10;$/;"	v
+WIDTH	user/src/ch3b_yield1.c	/^const int WIDTH = 10;$/;"	v
+WIDTH	user/src/ch3b_yield2.c	/^const int WIDTH = 10;$/;"	v
+YELLOW	os/log.h	/^	YELLOW = 93,$/;"	e	enum:LOG_COLOR
+ZOMBIE	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+_STRINGIFY	user/include/stdlib.h	10;"	d
+__FCNTL_H__	user/include/fcntl.h	2;"	d
+__LINE_WIDTH	user/lib/stdio.c	20;"	d	file:
+__STDDEF_H__	user/include/stddef.h	2;"	d
+__STDIO_H__	user/include/stdio.h	2;"	d
+__STDLIB_H__	user/include/stdlib.h	2;"	d
+__STRING_H__	user/include/string.h	2;"	d
+__SYSCALL_CONCAT	user/lib/syscall.h	27;"	d
+__SYSCALL_CONCAT_X	user/lib/syscall.h	26;"	d
+__SYSCALL_DISP	user/lib/syscall.h	28;"	d
+__SYSCALL_H__	user/lib/syscall.h	2;"	d
+__SYSCALL_LL_E	user/lib/arch/riscv/syscall_arch.h	1;"	d
+__SYSCALL_LL_O	user/lib/arch/riscv/syscall_arch.h	2;"	d
+__SYSCALL_NARGS	user/lib/syscall.h	24;"	d
+__SYSCALL_NARGS_X	user/lib/syscall.h	23;"	d
+__UNISTD_H__	user/include/unistd.h	2;"	d
+__asm_syscall	user/lib/arch/riscv/syscall_arch.h	4;"	d
+__clear_buffer	user/lib/stdio.c	/^void __clear_buffer()$/;"	f
+__fflush	user/lib/stdio.c	/^int __fflush()$/;"	f
+__scc	user/lib/syscall.h	8;"	d
+__start_main	user/lib/main.c	/^int __start_main(int argc, char **argv)$/;"	f
+__syscall	user/lib/syscall.h	32;"	d
+__syscall0	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall0(long n)$/;"	f
+__syscall1	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall1(long n, long a)$/;"	f
+__syscall1	user/lib/syscall.h	12;"	d
+__syscall2	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall2(long n, long a, long b)$/;"	f
+__syscall2	user/lib/syscall.h	13;"	d
+__syscall3	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall3(long n, long a, long b, long c)$/;"	f
+__syscall3	user/lib/syscall.h	14;"	d
+__syscall4	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall4(long n, long a, long b, long c, long d)$/;"	f
+__syscall4	user/lib/syscall.h	15;"	d
+__syscall5	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall5(long n, long a, long b, long c, long d, long e)$/;"	f
+__syscall5	user/lib/syscall.h	17;"	d
+__syscall6	user/lib/arch/riscv/syscall_arch.h	/^static inline long __syscall6(long n, long a, long b, long c, long d, long e,$/;"	f
+__syscall6	user/lib/syscall.h	19;"	d
+__write_buffer	user/lib/stdio.c	/^int __write_buffer()$/;"	f
+_entry	os/entry.S	/^_entry:$/;"	l
+_start	user/lib/arch/riscv/crt.S	/^_start:$/;"	l
+a	user/src/ch8b_mut_race.c	/^int a;$/;"	v
+a	user/src/ch8b_spin_mut_race.c	/^int a;$/;"	v
+a	user/src/ch8b_test_condvar.c	/^int a = 0;$/;"	v
+a0	os/trap.h	/^	\/* 112 *\/ uint64 a0;$/;"	m	struct:trapframe
+a1	os/trap.h	/^	\/* 120 *\/ uint64 a1;$/;"	m	struct:trapframe
+a2	os/trap.h	/^	\/* 128 *\/ uint64 a2;$/;"	m	struct:trapframe
+a3	os/trap.h	/^	\/* 136 *\/ uint64 a3;$/;"	m	struct:trapframe
+a4	os/trap.h	/^	\/* 144 *\/ uint64 a4;$/;"	m	struct:trapframe
+a5	os/trap.h	/^	\/* 152 *\/ uint64 a5;$/;"	m	struct:trapframe
+a6	os/trap.h	/^	\/* 160 *\/ uint64 a6;$/;"	m	struct:trapframe
+a7	os/trap.h	/^	\/* 168 *\/ uint64 a7;$/;"	m	struct:trapframe
+alloc	user/src/ch8_sem2_deadlock.c	/^const int alloc[THREAD_N] = { 2, 1, 1, 2 };$/;"	v
+allocpid	os/proc.c	/^int allocpid()$/;"	f
+allocproc	os/proc.c	/^struct proc *allocproc(void)$/;"	f
+app	os/pack.py	/^        app = app[:app.find('.')]$/;"	v
+app_dir	user/Makefile	/^app_dir = src$/;"	m
+app_info_ptr	os/loader.c	/^static uint64 *app_info_ptr;$/;"	v	file:
+app_num	os/loader.c	/^static uint64 app_num;$/;"	v	file:
+apps	os/kernelld.py	/^    apps = os.listdir(TARGET_DIR)$/;"	v
+apps	os/pack.py	/^    apps = os.listdir(TARGET_DIR)$/;"	v
+apps	scripts/kernelld.py	/^    apps = os.listdir(TARGET_DIR)$/;"	v
+apps	scripts/pack.py	/^    apps = os.listdir(TARGET_DIR)$/;"	v
+args	user/src/ch8b_threads_arg.c	/^} args[NTHREAD] = {$/;"	v	typeref:struct:thread_arg
+argv	user/src/usershell.c	/^char *argv[MAX_ARG_NUM];$/;"	v
+arr	user/src/ch8b_mut_phi_din.c	/^const int arr[N][ROUND * 2] = {$/;"	v
+assert	user/include/stdlib.h	23;"	d
+assert_eq	user/include/stdlib.h	39;"	d
+atoi	user/lib/string.c	/^int atoi(const char *s)$/;"	f
+basename	user/lib/string.c	/^char *basename(char *s)$/;"	f
+bin_dir	user/Makefile	/^bin_dir := build\/bin$/;"	m
+bool	user/include/stddef.h	/^typedef int bool;$/;"	t
+boot_stack	os/entry.S	/^boot_stack:$/;"	l
+boot_stack_top	os/entry.S	/^boot_stack_top:$/;"	l
+buffer	user/lib/stdio.c	/^static char buffer[__LINE_WIDTH];$/;"	v	file:
+buffer	user/src/ch8b_mpsc_sem.c	/^int buffer[buffer_size];$/;"	v
+buffer_len	user/lib/stdio.c	/^static int buffer_len;$/;"	v	file:
+buffer_lock	user/lib/stdio.c	/^static int buffer_lock;$/;"	v	file:
+buffer_lock_enabled	user/lib/stdio.c	/^int buffer_lock_enabled = 0;$/;"	v
+buffer_size	user/src/ch8b_mpsc_sem.c	7;"	d	file:
+c	user/src/ch8b_threads_arg.c	/^	char c;$/;"	m	struct:thread_arg	file:
+clean_bss	os/main.c	/^void clean_bss()$/;"	f
+clear	user/src/usershell.c	/^void clear()$/;"	f
+close	user/lib/syscall.c	/^int close(int fd)$/;"	f
+cmake_build_args	user/Makefile	/^cmake_build_args := -DARCH=$(ARCH) -DCHAPTER=$(CHAPTER)$/;"	m
+condvar_create	user/lib/syscall.c	/^int condvar_create()$/;"	f
+condvar_id	user/src/ch8b_test_condvar.c	/^int condvar_id;$/;"	v
+condvar_signal	user/lib/syscall.c	/^int condvar_signal(int cid)$/;"	f
+condvar_wait	user/lib/syscall.c	/^int condvar_wait(int cid, int mid)$/;"	f
+console_getchar	os/sbi.c	/^int console_getchar()$/;"	f
+console_init	os/console.c	/^void console_init()$/;"	f
+console_putchar	os/sbi.c	/^void console_putchar(int c)$/;"	f
+consputc	os/console.c	/^void consputc(int c)$/;"	f
+consumer	user/src/ch8b_mpsc_sem.c	/^void consumer()$/;"	f
+context	os/proc.h	/^	struct context context; \/\/ swtch() here to run process$/;"	m	struct:proc	typeref:struct:proc::context
+context	os/proc.h	/^struct context {$/;"	s
+count_during	user/src/ch5t_stride0.c	/^int count_during(int prio)$/;"	f
+count_during	user/src/ch5t_stride1.c	/^int count_during(int prio)$/;"	f
+count_during	user/src/ch5t_stride2.c	/^int count_during(int prio)$/;"	f
+count_during	user/src/ch5t_stride3.c	/^int count_during(int prio)$/;"	f
+count_during	user/src/ch5t_stride4.c	/^int count_during(int prio)$/;"	f
+count_during	user/src/ch5t_stride5.c	/^int count_during(int prio)$/;"	f
+count_syscall	user/lib/syscall.c	/^int count_syscall(int id)$/;"	f
+curr_proc	os/proc.c	/^struct proc *curr_proc()$/;"	f
+current_proc	os/proc.c	/^struct proc *current_proc;$/;"	v	typeref:struct:proc
+deadlock_test	user/src/ch8_sem1_deadlock.c	/^void deadlock_test(long _id)$/;"	f
+deadlock_test	user/src/ch8_sem2_deadlock.c	/^void deadlock_test(long _id)$/;"	f
+debugf	os/log.h	91;"	d
+debugf	os/log.h	98;"	d
+dev	user/include/stddef.h	/^	uint64 dev; \/\/ 文件所在磁盘驱动器号，不考虑$/;"	m	struct:__anon4
+digits	os/printf.c	/^static char digits[] = "0123456789abcdef";$/;"	v	file:
+digits	user/lib/stdio.c	/^static char digits[] = "0123456789abcdef";$/;"	v	file:
+dummy	os/string.c	/^void dummy(int _, ...)$/;"	f
+eat	user/src/ch8b_mut_phi_din.c	/^int eat[N][ROUND * 2];$/;"	v
+elf_dir	user/Makefile	/^elf_dir := build\/$(ARCH)$/;"	m
+enable_deadlock_detect	user/lib/syscall.c	/^int enable_deadlock_detect(int enabled)$/;"	f
+enable_thread_io_buffer	user/lib/stdio.c	/^void enable_thread_io_buffer()$/;"	f
+epc	os/trap.h	/^	\/*  24 *\/ uint64 epc; \/\/ saved user program counter$/;"	m	struct:trapframe
+errorf	os/log.h	58;"	d
+errorf	os/log.h	65;"	d
+exec	user/lib/syscall.c	/^int exec(const char *name, char **argv)$/;"	f
+exit	os/proc.c	/^void exit(int code)$/;"	f
+exit	user/lib/syscall.c	/^void exit(int code)$/;"	f
+f	os/kernelld.py	/^    f = open("kernel_app.ld", mode="w")$/;"	v
+f	os/pack.py	/^    f = open("link_app.S", mode="w")$/;"	v
+f	scripts/kernelld.py	/^    f = open("os\/kernel_app.ld", mode="w")$/;"	v
+f	scripts/pack.py	/^    f = open("os\/link_app.S", mode="w")$/;"	v
+fflush	user/lib/stdio.c	/^int fflush(int fd)$/;"	f
+finished	os/loader.c	/^int finished()$/;"	f
+first	user/src/ch8b_sync_sem.c	/^void first()$/;"	f
+first	user/src/ch8b_test_condvar.c	/^void first()$/;"	f
+fork	user/lib/syscall.c	/^int fork()$/;"	f
+front	user/src/ch8b_mpsc_sem.c	/^int front = 0;$/;"	v
+fstat	user/lib/syscall.c	/^int fstat(int fd, Stat *st)$/;"	f
+fun	user/src/ch8b_mut_race.c	/^void fun(long i)$/;"	f
+fun	user/src/ch8b_spin_mut_race.c	/^void fun()$/;"	f
+get_argv	user/src/usershell.c	/^void get_argv()$/;"	f
+get_cycle	os/timer.c	/^uint64 get_cycle()$/;"	f
+get_mtime	user/lib/syscall.c	/^int64 get_mtime()$/;"	f
+getchar	user/lib/stdio.c	/^int getchar()$/;"	f
+getpid	user/lib/syscall.c	/^int getpid()$/;"	f
+getppid	user/lib/syscall.c	/^int getppid()$/;"	f
+gettid	user/lib/syscall.c	/^int gettid(void)$/;"	f
+gp	os/trap.h	/^	\/*  56 *\/ uint64 gp;$/;"	m	struct:trapframe
+hash	user/lib/stdlib.c	/^static int hash(int n)$/;"	f	file:
+idle	os/proc.c	/^struct proc idle;$/;"	v	typeref:struct:proc
+infof	os/log.h	80;"	d
+infof	os/log.h	87;"	d
+ino	user/include/stddef.h	/^	uint64 ino; \/\/ inode 文件所在 inode 编号$/;"	m	struct:__anon4
+int16	user/include/stddef.h	/^typedef short int16;$/;"	t
+int32	user/include/stddef.h	/^typedef int int32;$/;"	t
+int64	user/include/stddef.h	/^typedef long long int64;$/;"	t
+int8	user/include/stddef.h	/^typedef char int8;$/;"	t
+intmax_t	user/include/stdio.h	/^typedef long int intmax_t;$/;"	t
+intptr_t	user/include/stddef.h	/^typedef int32_t intptr_t;$/;"	t
+intptr_t	user/include/stddef.h	/^typedef int64 intptr_t;$/;"	t
+intr_get	os/riscv.h	/^static inline int intr_get()$/;"	f
+intr_off	os/riscv.h	/^static inline void intr_off()$/;"	f
+intr_on	os/riscv.h	/^static inline void intr_on()$/;"	f
+is_empty	user/src/usershell.c	/^int is_empty()$/;"	f
+isdigit	user/lib/string.c	/^int isdigit(int c)$/;"	f
+isspace	user/lib/string.c	/^int isspace(int c)$/;"	f
+kernel_hartid	os/trap.h	/^	\/*  32 *\/ uint64 kernel_hartid; \/\/ saved kernel tp$/;"	m	struct:trapframe
+kernel_satp	os/trap.h	/^	\/*   0 *\/ uint64 kernel_satp; \/\/ kernel page table$/;"	m	struct:trapframe
+kernel_sp	os/trap.h	/^	\/*   8 *\/ uint64 kernel_sp; \/\/ top of process's kernel stack$/;"	m	struct:trapframe
+kernel_trap	os/trap.h	/^	\/*  16 *\/ uint64 kernel_trap; \/\/ usertrap()$/;"	m	struct:trapframe
+kerneltrap	os/trap.c	/^void kerneltrap()$/;"	f
+kstack	os/proc.c	/^char kstack[NPROC][PAGE_SIZE];$/;"	v
+kstack	os/proc.h	/^	uint64 kstack; \/\/ Virtual address of kernel stack$/;"	m	struct:proc
+line	user/src/usershell.c	/^char line[MAX_STR_LEN];$/;"	v
+link	user/lib/syscall.c	/^int link(const char *old_path, const char *new_path)$/;"	f
+load_app	os/loader.c	/^int load_app(int n, uint64 *info)$/;"	f
+loader_init	os/loader.c	/^void loader_init()$/;"	f
+mailread	user/lib/syscall.c	/^int mailread(void *buf, int len)$/;"	f
+mailwrite	user/lib/syscall.c	/^int mailwrite(int pid, void *buf, int len)$/;"	f
+main	os/main.c	/^void main()$/;"	f
+main	user/src/__ch2_bad_address.c	/^int main()$/;"	f
+main	user/src/__ch2_bad_instruction.c	/^int main()$/;"	f
+main	user/src/__ch2_bad_register.c	/^int main()$/;"	f
+main	user/src/ch2b_exit.c	/^int main()$/;"	f
+main	user/src/ch2b_hello_world.c	/^int main()$/;"	f
+main	user/src/ch2b_power.c	/^int main()$/;"	f
+main	user/src/ch3_trace.c	/^int main()$/;"	f
+main	user/src/ch3b_sleep.c	/^int main()$/;"	f
+main	user/src/ch3b_sleep1.c	/^int main()$/;"	f
+main	user/src/ch3b_yield0.c	/^int main()$/;"	f
+main	user/src/ch3b_yield1.c	/^int main()$/;"	f
+main	user/src/ch3b_yield2.c	/^int main()$/;"	f
+main	user/src/ch4_mmap0.c	/^int main()$/;"	f
+main	user/src/ch4_mmap1.c	/^int main()$/;"	f
+main	user/src/ch4_mmap2.c	/^int main()$/;"	f
+main	user/src/ch4_mmap3.c	/^int main()$/;"	f
+main	user/src/ch4_sbrk.c	/^int main()$/;"	f
+main	user/src/ch4_trace1.c	/^int main()$/;"	f
+main	user/src/ch4_unmap0.c	/^int main()$/;"	f
+main	user/src/ch4_unmap1.c	/^int main()$/;"	f
+main	user/src/ch5_exit0.c	/^int main()$/;"	f
+main	user/src/ch5_exit1.c	/^int main()$/;"	f
+main	user/src/ch5_mergetest.c	/^int main()$/;"	f
+main	user/src/ch5_ppid.c	/^int main()$/;"	f
+main	user/src/ch5_setprio.c	/^int main()$/;"	f
+main	user/src/ch5_spawn0.c	/^int main()$/;"	f
+main	user/src/ch5_spawn1.c	/^int main()$/;"	f
+main	user/src/ch5_usertest.c	/^int main()$/;"	f
+main	user/src/ch5b_exec_simple.c	/^int main()$/;"	f
+main	user/src/ch5b_exit.c	/^int main()$/;"	f
+main	user/src/ch5b_forktest0.c	/^int main()$/;"	f
+main	user/src/ch5b_forktest1.c	/^int main()$/;"	f
+main	user/src/ch5b_forktest2.c	/^int main()$/;"	f
+main	user/src/ch5b_getpid.c	/^int main()$/;"	f
+main	user/src/ch5b_usertest.c	/^int main()$/;"	f
+main	user/src/ch5t_stride0.c	/^int main()$/;"	f
+main	user/src/ch5t_stride1.c	/^int main()$/;"	f
+main	user/src/ch5t_stride2.c	/^int main()$/;"	f
+main	user/src/ch5t_stride3.c	/^int main()$/;"	f
+main	user/src/ch5t_stride4.c	/^int main()$/;"	f
+main	user/src/ch5t_stride5.c	/^int main()$/;"	f
+main	user/src/ch5t_usertest.c	/^int main()$/;"	f
+main	user/src/ch6_file0.c	/^int main()$/;"	f
+main	user/src/ch6_file1.c	/^int main()$/;"	f
+main	user/src/ch6_file2.c	/^int main()$/;"	f
+main	user/src/ch6_file3.c	/^int main()$/;"	f
+main	user/src/ch6_usertest.c	/^int main()$/;"	f
+main	user/src/ch6b_args.c	/^int main(int argc, char **argv)$/;"	f
+main	user/src/ch6b_assert.c	/^int main()$/;"	f
+main	user/src/ch6b_cat.c	/^int main()$/;"	f
+main	user/src/ch6b_exec.c	/^int main()$/;"	f
+main	user/src/ch6b_filetest.c	/^int main()$/;"	f
+main	user/src/ch6b_filetest_simple.c	/^int main()$/;"	f
+main	user/src/ch6b_panic.c	/^int main()$/;"	f
+main	user/src/ch6b_usertest.c	/^int main()$/;"	f
+main	user/src/ch7b_pipetest.c	/^int main()$/;"	f
+main	user/src/ch7b_usertest.c	/^int main()$/;"	f
+main	user/src/ch8_mut1_deadlock.c	/^int main()$/;"	f
+main	user/src/ch8_sem1_deadlock.c	/^int main()$/;"	f
+main	user/src/ch8_sem2_deadlock.c	/^int main()$/;"	f
+main	user/src/ch8_usertest.c	/^int main()$/;"	f
+main	user/src/ch8b_mpsc_sem.c	/^int main()$/;"	f
+main	user/src/ch8b_mut_phi_din.c	/^int main()$/;"	f
+main	user/src/ch8b_mut_race.c	/^int main()$/;"	f
+main	user/src/ch8b_spin_mut_race.c	/^int main()$/;"	f
+main	user/src/ch8b_sync_sem.c	/^int main()$/;"	f
+main	user/src/ch8b_test_condvar.c	/^int main()$/;"	f
+main	user/src/ch8b_threads.c	/^int main(void)$/;"	f
+main	user/src/ch8b_threads_arg.c	/^int main(void)$/;"	f
+main	user/src/ch8b_usertest.c	/^int main()$/;"	f
+main	user/src/usershell.c	/^int main()$/;"	f
+max_child	user/src/ch5b_exit.c	/^const int max_child = 32;$/;"	v
+memchr	user/lib/string.c	/^void *memchr(const void *src, int c, size_t n)$/;"	f
+memcmp	os/string.c	/^int memcmp(const void *v1, const void *v2, uint n)$/;"	f
+memcpy	os/string.c	/^void *memcpy(void *dst, const void *src, uint n)$/;"	f
+memmove	os/string.c	/^void *memmove(void *dst, const void *src, uint n)$/;"	f
+memset	os/string.c	/^void *memset(void *dst, int c, uint n)$/;"	f
+memset	user/lib/string.c	/^void *memset(void *dest, int c, size_t n)$/;"	f
+mmap	user/lib/syscall.c	/^int mmap(void *start, unsigned long long len, int prot, int flags)$/;"	f
+mode	user/include/stddef.h	/^	uint32 mode; \/\/ 文件类型$/;"	m	struct:__anon4
+munmap	user/lib/syscall.c	/^int munmap(void *start, unsigned long long len)$/;"	f
+mutex_blocking_create	user/lib/syscall.c	/^int mutex_blocking_create()$/;"	f
+mutex_create	user/lib/syscall.c	/^int mutex_create()$/;"	f
+mutex_id	user/src/ch8b_mut_race.c	/^int mutex_id;$/;"	v
+mutex_id	user/src/ch8b_spin_mut_race.c	/^int mutex_id = 0;$/;"	v
+mutex_id	user/src/ch8b_test_condvar.c	/^int mutex_id;$/;"	v
+mutex_lock	user/lib/syscall.c	/^int mutex_lock(int mid)$/;"	f
+mutex_unlock	user/lib/syscall.c	/^int mutex_unlock(int mid)$/;"	f
+nlink	user/include/stddef.h	/^	uint32 nlink; \/\/ 硬链接数量，初始为1$/;"	m	struct:__anon4
+null	user/lib/syscall.c	/^static char **null = { 0 };$/;"	v	file:
+num_test	user/src/ch5_usertest.c	/^const int num_test = sizeof(TESTS) \/ sizeof(TESTS[0]);$/;"	v
+number_per_producer	user/src/ch8b_mpsc_sem.c	9;"	d	file:
+open	user/lib/syscall.c	/^int open(const char *path, int flags)$/;"	f
+out	user/lib/stdio.c	/^static int out(int f, const char *s, size_t l)$/;"	f	file:
+out_dir	user/Makefile	/^out_dir := target$/;"	m
+out_unlocked	user/lib/stdio.c	/^static int out_unlocked(const char *s, size_t l)$/;"	f	file:
+pad	user/include/stddef.h	/^	uint64 pad[7]; \/\/ 无需考虑，为了兼容性设计$/;"	m	struct:__anon4
+pagetable_t	os/riscv.h	/^typedef uint64 *pagetable_t; \/\/ 512 PTEs$/;"	t
+panic	os/log.h	112;"	d
+panic	user/include/stdlib.h	13;"	d
+parse_argv	user/src/usershell.c	/^void parse_argv()$/;"	f
+per_thread	user/src/ch8b_mut_race.c	10;"	d	file:
+per_thread	user/src/ch8b_spin_mut_race.c	10;"	d	file:
+philosopher_dining	user/src/ch8b_mut_phi_din.c	/^void philosopher_dining(long id)$/;"	f
+pid	os/proc.h	/^	int pid; \/\/ Process ID$/;"	m	struct:proc
+pid	user/src/ch5t_usertest.c	/^int pid[] = {0, 0, 0, 0, 0, 0};$/;"	v
+pid_t	user/include/stddef.h	/^typedef int pid_t;$/;"	t
+pipe	user/lib/syscall.c	/^int pipe(void *p)$/;"	f
+pool	os/proc.c	/^struct proc pool[NPROC];$/;"	v	typeref:struct:proc
+pop	user/src/usershell.c	/^void pop()$/;"	f
+printf	os/printf.c	/^void printf(char *fmt, ...)$/;"	f
+printf	user/lib/stdio.c	/^void printf(const char *fmt, ...)$/;"	f
+printint	os/printf.c	/^static void printint(int xx, int base, int sign)$/;"	f	file:
+printint	user/lib/stdio.c	/^static void printint(int xx, int base, int sign)$/;"	f	file:
+printptr	os/printf.c	/^static void printptr(uint64 x)$/;"	f	file:
+printptr	user/lib/stdio.c	/^static void printptr(uint64 x)$/;"	f	file:
+proc	os/proc.h	/^struct proc {$/;"	s
+proc_init	os/proc.c	/^void proc_init(void)$/;"	f
+procstate	os/proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	g
+producer	user/src/ch8b_mpsc_sem.c	/^void producer(int id)$/;"	f
+producers	user/src/ch8b_mpsc_sem.c	8;"	d	file:
+pte_t	os/riscv.h	/^typedef uint64 pte_t;$/;"	t
+push	user/src/usershell.c	/^void push(char c)$/;"	f
+putchar	user/lib/stdio.c	/^int putchar(int c)$/;"	f
+puts	user/lib/stdio.c	/^int puts(const char *s)$/;"	f
+r_mcounteren	os/riscv.h	/^static inline uint64 r_mcounteren()$/;"	f
+r_medeleg	os/riscv.h	/^static inline uint64 r_medeleg()$/;"	f
+r_mhartid	os/riscv.h	/^static inline uint64 r_mhartid()$/;"	f
+r_mideleg	os/riscv.h	/^static inline uint64 r_mideleg()$/;"	f
+r_mie	os/riscv.h	/^static inline uint64 r_mie()$/;"	f
+r_mstatus	os/riscv.h	/^static inline uint64 r_mstatus()$/;"	f
+r_ra	os/riscv.h	/^static inline uint64 r_ra()$/;"	f
+r_satp	os/riscv.h	/^static inline uint64 r_satp()$/;"	f
+r_scause	os/riscv.h	/^static inline uint64 r_scause()$/;"	f
+r_sepc	os/riscv.h	/^static inline uint64 r_sepc()$/;"	f
+r_sie	os/riscv.h	/^static inline uint64 r_sie()$/;"	f
+r_sip	os/riscv.h	/^static inline uint64 r_sip()$/;"	f
+r_sp	os/riscv.h	/^static inline uint64 r_sp()$/;"	f
+r_sstatus	os/riscv.h	/^static inline uint64 r_sstatus()$/;"	f
+r_stval	os/riscv.h	/^static inline uint64 r_stval()$/;"	f
+r_stvec	os/riscv.h	/^static inline uint64 r_stvec()$/;"	f
+r_time	os/riscv.h	/^static inline uint64 r_time()$/;"	f
+r_tp	os/riscv.h	/^static inline uint64 r_tp()$/;"	f
+ra	os/proc.h	/^	uint64 ra;$/;"	m	struct:context
+ra	os/trap.h	/^	\/*  40 *\/ uint64 ra;$/;"	m	struct:trapframe
+rand	user/lib/stdlib.c	/^uint32 rand()$/;"	f
+read	user/lib/syscall.c	/^ssize_t read(int fd, void *buf, size_t len)$/;"	f
+repeat	user/src/ch6_file3.c	/^void repeat(char *target, const char *template, int times)$/;"	f
+request	user/src/ch8_sem1_deadlock.c	/^const int request[THREAD_N] = { 1, 3, 2 };$/;"	v
+request	user/src/ch8_sem2_deadlock.c	/^int request[THREAD_N] = { 1, -1, 2, -1 };$/;"	v
+res_num	user/src/ch8_sem1_deadlock.c	/^const int res_num[RES_TYPE] = { 1, 2, 1 };$/;"	v
+res_num	user/src/ch8_sem2_deadlock.c	/^const int res_num[RES_TYPE] = { 2, 2 };$/;"	v
+ret_code	user/src/ch8b_threads_arg.c	/^	int ret_code;$/;"	m	struct:thread_arg	file:
+run_all_app	os/loader.c	/^int run_all_app()$/;"	f
+run_tests	user/src/usertest.h	/^int run_tests(const char *tests[], int n)$/;"	f
+s0	os/proc.h	/^	uint64 s0;$/;"	m	struct:context
+s0	os/trap.h	/^	\/*  96 *\/ uint64 s0;$/;"	m	struct:trapframe
+s1	os/proc.h	/^	uint64 s1;$/;"	m	struct:context
+s1	os/trap.h	/^	\/* 104 *\/ uint64 s1;$/;"	m	struct:trapframe
+s10	os/proc.h	/^	uint64 s10;$/;"	m	struct:context
+s10	os/trap.h	/^	\/* 240 *\/ uint64 s10;$/;"	m	struct:trapframe
+s11	os/proc.h	/^	uint64 s11;$/;"	m	struct:context
+s11	os/trap.h	/^	\/* 248 *\/ uint64 s11;$/;"	m	struct:trapframe
+s2	os/proc.h	/^	uint64 s2;$/;"	m	struct:context
+s2	os/trap.h	/^	\/* 176 *\/ uint64 s2;$/;"	m	struct:trapframe
+s3	os/proc.h	/^	uint64 s3;$/;"	m	struct:context
+s3	os/trap.h	/^	\/* 184 *\/ uint64 s3;$/;"	m	struct:trapframe
+s4	os/proc.h	/^	uint64 s4;$/;"	m	struct:context
+s4	os/trap.h	/^	\/* 192 *\/ uint64 s4;$/;"	m	struct:trapframe
+s5	os/proc.h	/^	uint64 s5;$/;"	m	struct:context
+s5	os/trap.h	/^	\/* 200 *\/ uint64 s5;$/;"	m	struct:trapframe
+s6	os/proc.h	/^	uint64 s6;$/;"	m	struct:context
+s6	os/trap.h	/^	\/* 208 *\/ uint64 s6;$/;"	m	struct:trapframe
+s7	os/proc.h	/^	uint64 s7;$/;"	m	struct:context
+s7	os/trap.h	/^	\/* 216 *\/ uint64 s7;$/;"	m	struct:trapframe
+s8	os/proc.h	/^	uint64 s8;$/;"	m	struct:context
+s8	os/trap.h	/^	\/* 224 *\/ uint64 s8;$/;"	m	struct:trapframe
+s9	os/proc.h	/^	uint64 s9;$/;"	m	struct:context
+s9	os/trap.h	/^	\/* 232 *\/ uint64 s9;$/;"	m	struct:trapframe
+safestrcpy	os/string.c	/^char *safestrcpy(char *s, const char *t, int n)$/;"	f
+sbi_call	os/sbi.c	/^int inline sbi_call(uint64 which, uint64 arg0, uint64 arg1, uint64 arg2)$/;"	f
+sbrk	user/lib/syscall.c	/^long sbrk(long n)$/;"	f
+sched	os/proc.c	/^void sched(void)$/;"	f
+sched_yield	user/lib/syscall.c	/^int sched_yield()$/;"	f
+scheduler	os/proc.c	/^void scheduler(void)$/;"	f
+sec	os/timer.h	/^	uint64 sec; \/\/ 自 Unix 纪元起的秒数$/;"	m	struct:__anon2
+sec	user/include/stddef.h	/^	uint64 sec; \/\/ 自 Unix 纪元起的秒数$/;"	m	struct:__anon3
+second	user/src/ch8b_sync_sem.c	/^void second()$/;"	f
+second	user/src/ch8b_test_condvar.c	/^void second()$/;"	f
+seed	user/lib/stdlib.c	/^static uint32 seed;$/;"	v	file:
+sem_alloc	user/src/ch8_sem1_deadlock.c	/^void sem_alloc(int tid)$/;"	f
+sem_dealloc	user/src/ch8_sem1_deadlock.c	/^void sem_dealloc(int tid)$/;"	f
+sem_empty_id	user/src/ch8b_mpsc_sem.c	/^int sem_empty_id;$/;"	v
+sem_existed_id	user/src/ch8b_mpsc_sem.c	/^int sem_existed_id;$/;"	v
+sem_mutex_id	user/src/ch8b_mpsc_sem.c	/^int sem_mutex_id;$/;"	v
+sem_sync_id	user/src/ch8b_sync_sem.c	/^int sem_sync_id;$/;"	v
+semaphore_barrier_id	user/src/ch8_sem1_deadlock.c	/^int semaphore_barrier_id;$/;"	v
+semaphore_barrier_id	user/src/ch8_sem2_deadlock.c	/^int semaphore_barrier_id;$/;"	v
+semaphore_create	user/lib/syscall.c	/^int semaphore_create(int res_count)$/;"	f
+semaphore_down	user/lib/syscall.c	/^int semaphore_down(int sid)$/;"	f
+semaphore_up	user/lib/syscall.c	/^int semaphore_up(int sid)$/;"	f
+set_kerneltrap	os/trap.c	/^void set_kerneltrap(void)$/;"	f
+set_next_timer	os/timer.c	/^void set_next_timer()$/;"	f
+set_priority	user/lib/syscall.c	/^int set_priority(int prio)$/;"	f
+set_timer	os/sbi.c	/^void set_timer(uint64 stime)$/;"	f
+set_usertrap	os/trap.c	/^void set_usertrap(void)$/;"	f
+sfence_vma	os/riscv.h	/^static inline void sfence_vma()$/;"	f
+shutdown	os/sbi.c	/^void shutdown()$/;"	f
+size_t	user/include/stddef.h	/^typedef uintptr_t size_t;$/;"	t
+sleep	user/lib/syscall.c	/^int sleep(unsigned long long time)$/;"	f
+sp	os/proc.h	/^	uint64 sp;$/;"	m	struct:context
+sp	os/trap.h	/^	\/*  48 *\/ uint64 sp;$/;"	m	struct:trapframe
+spawn	user/lib/syscall.c	/^int spawn(const char *file)$/;"	f
+spin_delay	user/src/ch5t_stride0.c	/^void spin_delay()$/;"	f
+spin_delay	user/src/ch5t_stride1.c	/^void spin_delay()$/;"	f
+spin_delay	user/src/ch5t_stride2.c	/^void spin_delay()$/;"	f
+spin_delay	user/src/ch5t_stride3.c	/^void spin_delay()$/;"	f
+spin_delay	user/src/ch5t_stride4.c	/^void spin_delay()$/;"	f
+spin_delay	user/src/ch5t_stride5.c	/^void spin_delay()$/;"	f
+srand	user/lib/stdlib.c	/^void srand(int s)$/;"	f
+ssize_t	user/include/stddef.h	/^typedef intptr_t ssize_t;$/;"	t
+state	os/proc.h	/^	enum procstate state; \/\/ Process state$/;"	m	struct:proc	typeref:enum:proc::procstate
+stderr	user/include/stdio.h	6;"	d
+stdin	user/include/stdio.h	4;"	d
+stdout	user/include/stdio.h	5;"	d
+stpcpy	user/lib/string.c	/^char *stpcpy(char *restrict d, const char *s)$/;"	f
+stpncpy	user/lib/string.c	/^char *stpncpy(char *restrict d, const char *s, size_t n)$/;"	f
+strcmp	user/lib/string.c	/^int strcmp(const char *l, const char *r)$/;"	f
+strlen	os/string.c	/^int strlen(const char *s)$/;"	f
+strlen	user/lib/string.c	/^size_t strlen(const char *s)$/;"	f
+strncmp	os/string.c	/^int strncmp(const char *p, const char *q, uint n)$/;"	f
+strncmp	user/lib/string.c	/^int strncmp(const char *_l, const char *_r, size_t n)$/;"	f
+strncpy	os/string.c	/^char *strncpy(char *s, const char *t, int n)$/;"	f
+strnlen	user/lib/string.c	/^size_t strnlen(const char *s, size_t n)$/;"	f
+swtch	os/switch.S	/^swtch:$/;"	l
+sys_exit	os/syscall.c	/^__attribute__((noreturn)) void sys_exit(int code)$/;"	f
+sys_get_time	user/lib/syscall.c	/^int sys_get_time(TimeVal *ts, int tz)$/;"	f
+sys_gettimeofday	os/syscall.c	/^uint64 sys_gettimeofday(TimeVal *val, int _tz)$/;"	f
+sys_linkat	user/lib/syscall.c	/^int sys_linkat(int olddirfd, const char *oldpath, int newdirfd, const char *newpath,$/;"	f
+sys_sched_yield	os/syscall.c	/^uint64 sys_sched_yield()$/;"	f
+sys_unlinkat	user/lib/syscall.c	/^int sys_unlinkat(int dirfd, const char *path, unsigned int flags)$/;"	f
+sys_write	os/syscall.c	/^uint64 sys_write(int fd, char *str, uint len)$/;"	f
+syscall	os/syscall.c	/^void syscall()$/;"	f
+syscall	user/lib/syscall.h	33;"	d
+syscall_arg_t	user/lib/syscall.h	/^typedef long syscall_arg_t;$/;"	t
+t0	os/trap.h	/^	\/*  72 *\/ uint64 t0;$/;"	m	struct:trapframe
+t1	os/trap.h	/^	\/*  80 *\/ uint64 t1;$/;"	m	struct:trapframe
+t2	os/trap.h	/^	\/*  88 *\/ uint64 t2;$/;"	m	struct:trapframe
+t3	os/trap.h	/^	\/* 256 *\/ uint64 t3;$/;"	m	struct:trapframe
+t4	os/trap.h	/^	\/* 264 *\/ uint64 t4;$/;"	m	struct:trapframe
+t5	os/trap.h	/^	\/* 272 *\/ uint64 t5;$/;"	m	struct:trapframe
+t6	os/trap.h	/^	\/* 280 *\/ uint64 t6;$/;"	m	struct:trapframe
+tail	user/src/ch8b_mpsc_sem.c	/^int tail = 0;$/;"	v
+test	user/src/usertest.h	/^int test(const char *succs[], int nsucc, const char *fails[], int nfail,$/;"	f
+test_str	user/src/ch6_file3.c	/^char test_str[4096];$/;"	v
+think	user/src/ch8b_mut_phi_din.c	/^int think[N][ROUND * 2];$/;"	v
+thread	user/src/ch8b_threads_arg.c	/^void thread(struct thread_arg *arg)$/;"	f
+thread_a	user/src/ch8b_threads.c	/^void thread_a()$/;"	f
+thread_arg	user/src/ch8b_threads_arg.c	/^struct thread_arg {$/;"	s	file:
+thread_b	user/src/ch8b_threads.c	/^void thread_b()$/;"	f
+thread_c	user/src/ch8b_threads.c	/^void thread_c()$/;"	f
+thread_count	user/src/ch8b_mut_race.c	9;"	d	file:
+thread_count	user/src/ch8b_spin_mut_race.c	9;"	d	file:
+thread_create	user/lib/syscall.c	/^int thread_create(void *entry, void *arg)$/;"	f
+threadid	os/proc.c	/^int threadid()$/;"	f
+threads	user/src/ch8b_mpsc_sem.c	/^int threads[producers + 1];$/;"	v
+threads	user/src/ch8b_mut_race.c	/^int threads[thread_count];$/;"	v
+threads	user/src/ch8b_spin_mut_race.c	/^int threads[thread_count];$/;"	v
+timer_init	os/timer.c	/^void timer_init()$/;"	f
+top	user/src/usershell.c	/^int top = 0;$/;"	v
+tp	os/trap.h	/^	\/*  64 *\/ uint64 tp;$/;"	m	struct:trapframe
+trace	user/lib/syscall.c	/^int trace(enum trace_request req, unsigned long id, uint8 data)$/;"	f
+trace_read	user/lib/syscall.c	/^int trace_read(const uint8 *addr)$/;"	f
+trace_request	user/include/unistd.h	/^enum trace_request {$/;"	g
+trace_write	user/lib/syscall.c	/^int trace_write(uint8 *addr, uint8 data)$/;"	f
+tracef	os/log.h	102;"	d
+tracef	os/log.h	109;"	d
+trampoline	os/trampoline.S	/^trampoline:$/;"	l
+trap_init	os/trap.c	/^void trap_init(void)$/;"	f
+trapframe	os/proc.c	/^__attribute__((aligned(4096))) char trapframe[NPROC][PAGE_SIZE];$/;"	v
+trapframe	os/proc.h	/^	struct trapframe *trapframe; \/\/ data page for trampoline.S$/;"	m	struct:proc	typeref:struct:proc::trapframe
+trapframe	os/trap.h	/^struct trapframe {$/;"	s
+try_sem_down	user/src/ch8_sem1_deadlock.c	/^void try_sem_down(int tid, int sem_id)$/;"	f
+try_sem_down	user/src/ch8_sem2_deadlock.c	/^void try_sem_down(int id, int sem_id)$/;"	f
+uchar	os/types.h	/^typedef unsigned char uchar;$/;"	t
+uint	os/types.h	/^typedef unsigned int uint;$/;"	t
+uint	user/include/stddef.h	/^typedef unsigned int uint;$/;"	t
+uint16	os/types.h	/^typedef unsigned short uint16;$/;"	t
+uint16	user/include/stddef.h	/^typedef unsigned short uint16;$/;"	t
+uint32	os/types.h	/^typedef unsigned int uint32;$/;"	t
+uint32	user/include/stddef.h	/^typedef unsigned int uint32;$/;"	t
+uint64	os/types.h	/^typedef unsigned long uint64;$/;"	t
+uint64	user/include/stddef.h	/^typedef unsigned long long uint64;$/;"	t
+uint8	os/types.h	/^typedef unsigned char uint8;$/;"	t
+uint8	user/include/stddef.h	/^typedef unsigned char uint8;$/;"	t
+uintmax_t	user/include/stdio.h	/^typedef unsigned long int uintmax_t;$/;"	t
+uintptr_t	user/include/stddef.h	/^typedef uint32_t uintptr_t;$/;"	t
+uintptr_t	user/include/stddef.h	/^typedef uint64 uintptr_t;$/;"	t
+unknown_trap	os/trap.c	/^void unknown_trap()$/;"	f
+unlink	user/lib/syscall.c	/^int unlink(const char *path)$/;"	f
+usec	os/timer.h	/^	uint64 usec; \/\/ 微秒数$/;"	m	struct:__anon2
+usec	user/include/stddef.h	/^	uint64 usec; \/\/ 微秒数$/;"	m	struct:__anon3
+userret	os/trampoline.S	/^userret:$/;"	l
+usertrap	os/trap.c	/^void usertrap()$/;"	f
+usertrapret	os/trap.c	/^void usertrapret()$/;"	f
+uservec	os/trampoline.S	/^uservec:$/;"	l
+ushort	os/types.h	/^typedef unsigned short ushort;$/;"	t
+ustack	os/proc.c	/^__attribute__((aligned(4096))) char ustack[NPROC][PAGE_SIZE];$/;"	v
+ustack	os/proc.h	/^	uint64 ustack; \/\/ Virtual address of user stack$/;"	m	struct:proc
+va_arg	user/include/stddef.h	48;"	d
+va_arg	user/include/stdio.h	9;"	d
+va_copy	user/include/stddef.h	50;"	d
+va_copy	user/include/stdio.h	11;"	d
+va_end	user/include/stddef.h	49;"	d
+va_end	user/include/stdio.h	10;"	d
+va_list	user/include/stddef.h	/^typedef __builtin_va_list va_list;$/;"	t
+va_list	user/include/stdio.h	/^typedef __builtin_va_list va_list;$/;"	t
+va_start	user/include/stddef.h	47;"	d
+va_start	user/include/stdio.h	8;"	d
+w_mcounteren	os/riscv.h	/^static inline void w_mcounteren(uint64 x)$/;"	f
+w_medeleg	os/riscv.h	/^static inline void w_medeleg(uint64 x)$/;"	f
+w_mepc	os/riscv.h	/^static inline void w_mepc(uint64 x)$/;"	f
+w_mideleg	os/riscv.h	/^static inline void w_mideleg(uint64 x)$/;"	f
+w_mie	os/riscv.h	/^static inline void w_mie(uint64 x)$/;"	f
+w_mscratch	os/riscv.h	/^static inline void w_mscratch(uint64 x)$/;"	f
+w_mstatus	os/riscv.h	/^static inline void w_mstatus(uint64 x)$/;"	f
+w_mtvec	os/riscv.h	/^static inline void w_mtvec(uint64 x)$/;"	f
+w_satp	os/riscv.h	/^static inline void w_satp(uint64 x)$/;"	f
+w_sepc	os/riscv.h	/^static inline void w_sepc(uint64 x)$/;"	f
+w_sie	os/riscv.h	/^static inline void w_sie(uint64 x)$/;"	f
+w_sip	os/riscv.h	/^static inline void w_sip(uint64 x)$/;"	f
+w_sscratch	os/riscv.h	/^static inline void w_sscratch(uint64 x)$/;"	f
+w_sstatus	os/riscv.h	/^static inline void w_sstatus(uint64 x)$/;"	f
+w_stvec	os/riscv.h	/^static inline void w_stvec(uint64 x)$/;"	f
+w_tp	os/riscv.h	/^static inline void w_tp(uint64 x)$/;"	f
+wait	user/lib/syscall.c	/^int wait(int *code)$/;"	f
+waitpid	user/lib/syscall.c	/^int waitpid(int pid, int *code)$/;"	f
+waittid	user/lib/syscall.c	/^int waittid(int tid)$/;"	f
+warnf	os/log.h	69;"	d
+warnf	os/log.h	76;"	d
+write	user/lib/syscall.c	/^ssize_t write(int fd, const void *buf, size_t len)$/;"	f
+yield	os/proc.c	/^void yield(void)$/;"	f

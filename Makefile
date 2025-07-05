@@ -5,6 +5,8 @@ LOG ?= error
 
 K = os
 U = user
+BOOTLOAD = bootloader
+RUSTSBI = $(BOOTLOAD)/rustsbi-k210.bin
 
 TOOLPREFIX = riscv64-unknown-elf-
 CC = $(TOOLPREFIX)gcc
@@ -83,50 +85,23 @@ build: build/kernel
 
 build/kernel: $(OBJS) os/kernel_app.ld
 	$(LD) $(LDFLAGS) -T os/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
-	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
-	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
+	$(OBJCOPY) $(BUILDDIR)/kernel --strip-all -O binary $(BUILDDIR)/kernel.bin
+	$(CP) $(RUSTSBI) rustsbik210.bin
+	dd if=$(BUILDDIR)/kernel.bin of=rustsbik210.bin bs=128k seek=1
+	$(CP) rustsbik210.bin $(BUILDDIR)/k210.bin
+	$(RM) rustsbik210.bin
 	@echo 'Build kernel done'
 
 clean:
 	rm -rf $(BUILDDIR) os/kernel_app.ld os/link_app.S
 	make -C $(U) clean
+	rm -rf $(BUILDDIR)
 
-# BOARD
-BOARD		?= qemu
-SBI			?= rustsbi
-BOOTLOADER	:= ./bootloader/rustsbi-qemu.bin
-
-QEMU = qemu-system-riscv64
-QEMUOPTS = \
-	-nographic \
-	-machine virt \
-	-bios $(BOOTLOADER) \
-	-kernel build/kernel	\
-
-run: build/kernel
-	$(QEMU) $(QEMUOPTS)
-
-# QEMU's gdb stub command line changed in 0.11
-QEMUGDB = $(shell if $(QEMU) -help | grep -q '^-gdb'; \
-	then echo "-gdb tcp::15234"; \
-	else echo "-s -p 15234"; fi)
-
-debug: build/kernel .gdbinit
-	@tmux new-session -d \
-		$(QEMU) $(QEMUOPTS) -S $(QEMUGDB) && \
-		tmux split-window -h "$(GDB) -ex 'target remote localhost:15234'" && \
-		tmux -2 attach-session -d
-
-gdbserver: build/kernel
-	$(QEMU) $(QEMUOPTS) -S $(QEMUGDB)
-
-gdbclient:
-	$(GDB) -ex "target remote localhost:15234"
 
 CHAPTER ?= $(shell git rev-parse --abbrev-ref HEAD | grep -oP 'ch\K[0-9]')
 
 user:
 	make -C $(U) CHAPTER=$(CHAPTER) BASE=$(BASE)
 
-test: user run
+test: user build
 
