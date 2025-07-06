@@ -18,7 +18,7 @@ void trap_init(void)
 //
 void usertrap(struct trapframe *trapframe)
 {
-	printf("usertrap: a0 = %p\n", trapframe->a0);
+	printf("usertrap: a0 = %d\n", trapframe->a0);
 	printf("usertrap: epc = %p, sp = %p, kernel_sp = %p\n", trapframe->epc,
 	       trapframe->sp, trapframe->kernel_sp);
 	printf("cause = %d\n", r_scause());
@@ -81,4 +81,5 @@ void usertrapret(struct trapframe *trapframe, uint64 kstack)
 	// tell trampoline.S the user page table to switch to.
 	// uint64 satp = MAKE_SATP(p->pagetable);
 	userret((uint64)trapframe);
+	printf("continue2\n");
 }

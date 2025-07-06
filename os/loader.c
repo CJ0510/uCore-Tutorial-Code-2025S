@@ -41,6 +41,7 @@ int run_next_app()
 	memset(trapframe, 0, 4096);
 	trapframe->epc = BASE_ADDRESS;
 	trapframe->sp = (uint64)user_stack + USER_STACK_SIZE;
+	printf("continue....\n");
 	usertrapret(trapframe, (uint64)boot_stack_top);
 	return 0;
 }
