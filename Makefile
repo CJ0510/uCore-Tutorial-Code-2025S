@@ -131,4 +131,3 @@ user:
 	make -C user CHAPTER=$(CHAPTER) BASE=$(BASE)
 
 test: user run
-
